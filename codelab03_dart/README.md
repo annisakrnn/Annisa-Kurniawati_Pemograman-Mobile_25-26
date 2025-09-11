@@ -6,11 +6,14 @@ Langkah 1
 
 <img width="265" height="202" alt="image" src="https://github.com/user-attachments/assets/7b70f31f-90d2-439c-8593-239610f0c362" />
 
-# Langkah 2
-# Jelaskan:
-# Jika di run code awal error dikarenakan penulisan sintaks yang harusnya huruf kecil pada code tersebut masih huruf besar. 
-# Langkah 3
-# Jika ditambahkan code tersebut dan di run masih error. cara untuk memperbaiki adalah dengan meng command code pada langkah 1 daan memperbaiki penulisan sintaks pada code di langkah 3
+Langkah 2
+
+Jelaskan:
+Jika di run code awal error dikarenakan penulisan sintaks yang harusnya huruf kecil pada code tersebut masih huruf besar. 
+
+Langkah 3
+Jika ditambahkan code tersebut dan di run masih error. cara untuk memperbaiki adalah dengan meng command code pada langkah 1 daan memperbaiki penulisan sintaks pada code di langkah 3
+
 # Output:
 <img width="835" height="182" alt="Screenshot 2025-09-11 145313" src="https://github.com/user-attachments/assets/09b0849b-6f6d-4470-825b-d59e7b68bfe7" />
 
