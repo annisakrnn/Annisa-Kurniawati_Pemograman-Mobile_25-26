@@ -1,7 +1,7 @@
 # Annisa-Kurniawati/04/2341720070
 # Praktikum 1: Menerapkan Control Flows ("if/else")
 # Langkah 1
-codelab03_dart/img/image-1.png
+![alt text](image.png)
 # Langkah 2
 # Jelaskan:
 # Jika di run code awal error dikarenakan penulisan sintaks yang harusnya huruf kecil pada code tersebut masih huruf besar. 
