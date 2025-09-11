@@ -2,6 +2,7 @@
 # Praktikum 1: Menerapkan Control Flows ("if/else")
 # Langkah 1
 <img width="265" height="202" alt="image" src="https://github.com/user-attachments/assets/7b70f31f-90d2-439c-8593-239610f0c362" />
+
 # Langkah 2
 # Jelaskan:
 # Jika di run code awal error dikarenakan penulisan sintaks yang harusnya huruf kecil pada code tersebut masih huruf besar. 
@@ -14,6 +15,7 @@
 # Praktikum 2: Menerapkan Perulangan "while" dan "do-while"
 # Langkah 1
 <img width="155" height="132" alt="image-2" src="https://github.com/user-attachments/assets/6ad84107-8511-48d3-ba73-39abfbddcf21" />
+
 # Langkah 2
 # Jelaskan: 
 # Jika di run code tersebut error karena variabel counter tidak diinisialisasi.
@@ -26,6 +28,7 @@
 # Praktikum 3: Menerapkan Perulangan "for" dan "break-continue"
 # Langkah 1
 <img width="224" height="129" alt="image-3" src="https://github.com/user-attachments/assets/9bf3542c-49ab-4a39-93ef-b10cedfe183d" />
+
 # Langkah 2:
 # Jelaskan:
 # Jika di run error karena kesalahan sintaks for untuk loop, index bukan pernyataan valid. jadi seharusnya index++. variabel indeks tidak di deklarasikan dengan tipe data, tidak sesuainya penulisan di sintaks index, dan fungsi print tidak dikenali.
