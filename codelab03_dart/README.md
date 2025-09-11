@@ -1,6 +1,8 @@
-# Annisa-Kurniawati/04/2341720070
-# Praktikum 1: Menerapkan Control Flows ("if/else")
-# Langkah 1
+Annisa-Kurniawati/04/2341720070
+
+Praktikum 1: Menerapkan Control Flows ("if/else")
+
+Langkah 1
 <img width="265" height="202" alt="image" src="https://github.com/user-attachments/assets/7b70f31f-90d2-439c-8593-239610f0c362" />
 
 # Langkah 2
