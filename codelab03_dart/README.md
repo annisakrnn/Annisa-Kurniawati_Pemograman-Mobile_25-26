@@ -63,6 +63,7 @@ Sudah dijelaskan di atas
 2. Buatlah sebuah program yang dapat menampilkan bilangan prima dari angka 0 sampai 201 menggunakan Dart. Ketika bilangan prima ditemukan, maka tampilkan nama lengkap dan NIM Anda.
 
 Input
+
 <img width="636" height="519" alt="Screenshot 2025-09-11 151326" src="https://github.com/user-attachments/assets/7ffa489b-a41a-440d-a1d0-871905733360" />
 
 Output
