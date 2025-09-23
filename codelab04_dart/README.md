@@ -51,19 +51,23 @@ Langkah 1 dan 2
 
 <img width="612" height="467" alt="Screenshot 2025-09-23 190728" src="https://github.com/user-attachments/assets/9d96c652-dbb0-4636-a4f7-02864ec89eea" />
 Yang terjadi error
+
 Perbaikan:
 <img width="738" height="350" alt="Screenshot 2025-09-23 190916" src="https://github.com/user-attachments/assets/251d2d50-e2be-431b-8f2e-33dd512c9699" />
 
 Langkah 3
 
 <img width="296" height="289" alt="Screenshot 2025-09-23 191011" src="https://github.com/user-attachments/assets/b1ecbe61-9e53-47c5-9f69-21b4ca2324fa" />
+
 Yang terjadi error
+
 Perbaikan dan Menambahkan variabel list berisi NIM Anda menggunakan Spread Operators.
 <img width="807" height="568" alt="Screenshot 2025-09-23 191703" src="https://github.com/user-attachments/assets/e2de28ee-5688-496e-befc-d6e40ab67761" />
 
 Langkah 4
 <img width="666" height="74" alt="Screenshot 2025-09-23 191803" src="https://github.com/user-attachments/assets/11ceb140-63d4-4203-9b77-2d7c7953fdba" />
 Yang terjadi error
+
 Perbaikan jika promoActive = true:
 <img width="674" height="216" alt="Screenshot 2025-09-23 191944" src="https://github.com/user-attachments/assets/0f4261ea-077f-4063-9c56-7666dd8caae4" />
 Perbaikan jika promoActive = false:
@@ -72,6 +76,7 @@ Perbaikan jika promoActive = false:
 Langkah 5
 <img width="799" height="48" alt="Screenshot 2025-09-23 192100" src="https://github.com/user-attachments/assets/d325480a-3186-460b-bf36-c56674cfaa2d" />
 Yang terjadi error
+
 Perbaikan, jika login = manager:
 <img width="802" height="194" alt="Screenshot 2025-09-23 192200" src="https://github.com/user-attachments/assets/3abf3e00-bae5-4344-b652-fca84389fd66" />
 
