@@ -1,4 +1,4 @@
-<img width="296" height="289" alt="Screenshot 2025-09-23 191011" src="https://github.com/user-attachments/assets/00a3f991-def0-4a8d-b8ee-1253611084ce" />Nama: Annisa Kurniawati
+Nama: Annisa Kurniawati
 
 Kelas: 3H
 
@@ -9,13 +9,10 @@ Absen: 03
 **Praktikum 1:**
 Langkah 1 dan 2
 <img width="750" height="678" alt="Screenshot 2025-09-22 123558" src="https://github.com/user-attachments/assets/ae7a6b4e-f78f-4986-bcf1-c61b461f2763" />
-
 Yang terjadi tidak error dan outputnya seperti pada gambar
 
 Langkah 3
 <img width="745" height="622" alt="Screenshot 2025-09-22 132236" src="https://github.com/user-attachments/assets/99a15008-5906-40a9-b71a-c9601799df57" />
-
-
 Yang terjadi tidak error dan outputnya seperti pada gambar
 
 **Praktikum 2**
