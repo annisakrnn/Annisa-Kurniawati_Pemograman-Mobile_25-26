@@ -123,7 +123,7 @@ Perbaikan:
    **Jawab**
 
    - Parameter Wajib: Harus diberikan nilai saat pemanggilan fungsi.
-     ```dart
+```dart
 void greet(String name, int nim) {
    print('Hello, $name. You are NIM $nim');
    greet('Annisa', 2341720070); 
@@ -168,14 +168,14 @@ Functions as first-class objects berarti bahwa dalam bahasa pemrograman tertentu
 
  greeting = greet  # Menyimpan fungsi ke variabel
 
- print(greeting("Ratna"))  # Output: Hello, Ratna!
+ print(greeting("Annisa"))  # Output: Hello, Annisa!
 
  # Mengoper fungsi sebagai argumen
  def apply_function(func, value):
      return func(value)
 
- result = apply_function(greet, "Ratna")
- print(result)  # Output: Hello, Ratna!
+ result = apply_function(greet, "Annisa")
+ print(result)  # Output: Hello, Annisa!
 
  # Mengembalikan fungsi dari fungsi lain
  def create_multiplier(multiplier):
@@ -189,7 +189,7 @@ Functions as first-class objects berarti bahwa dalam bahasa pemrograman tertentu
  # Menyimpan fungsi dalam list
  functions = [greet, double]
  for func in functions:
-     print(func("Ratna"))  # Output: Hello, Ratna! dan 10
+     print(func("Annisa"))  # Output: Hello, Annisa! dan 10
 ```
 
 5. Apa itu Anonymous Functions? Jelaskan dan berikan contohnya!
@@ -286,10 +286,9 @@ print("Count:", count)       # Output: Count: 5
 print("Average:", average)   # Output: Average: 30.0
 ```
 - Menggunakan List
-  ```dart
+```dart
 def get_fruit():
 return ["Apple", "Orange", "Watermelon"]  # Mengembalikan list
-
 fruit = get_fruit()
 print(names)  # Output: ['Apple', 'Orange', 'Watermelon']
 ```
@@ -297,13 +296,13 @@ print(names)  # Output: ['Apple', 'Orange', 'Watermelon']
 ```dart
 def get_person_info():
 return {
-    "nama": "Ratnasari",
-    "NIM": 2241720007,
+    "nama": "Annisa",
+    "NIM": 2341720070,
     "prodi": "Teknik Infoematika"
 }
 
 person_info = get_person_info()
-print(person_info)  # Output: {'nama': 'Ratnasari', 'NIM': 2241720007, 'prodi': 'Teknik Infoematika'}
+print(person_info)  # Output: {'nama': 'Annisa', 'NIM': 2341720070, 'prodi': 'Teknik Infoematika'}
 ```
 
 
