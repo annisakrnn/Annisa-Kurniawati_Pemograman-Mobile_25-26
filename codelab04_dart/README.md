@@ -93,15 +93,19 @@ Langkah 1 dan 2
 Penjelasan Output: (first, a: 2, b: true, 'last'): Ini menunjukkan bahwa record berisi elemen dengan struktur sebagai berikut: 'first': Elemen posisi pertama. a: 2: Elemen nama a dengan nilai 2. b: true: Elemen nama b dengan nilai true. 'last': Elemen posisi terakhir. Record dalam Dart memudahkan pengelompokan beberapa nilai yang berbeda tipe dalam satu struktur tanpa perlu membuat kelas khusus.
 
 Langkah 3
+
 <img width="379" height="199" alt="image" src="https://github.com/user-attachments/assets/e1f7e9db-cb4c-465f-88cd-8bf4e47312f8" />
 
 Langkah 4
+
 <img width="442" height="234" alt="Screenshot 2025-09-23 193700" src="https://github.com/user-attachments/assets/82e42c61-c990-46dd-8c51-57733cbc7dff" />
 
 Langkah 5
+
 <img width="511" height="338" alt="Screenshot 2025-09-23 193750" src="https://github.com/user-attachments/assets/095b31cb-8206-410a-95f7-cf833745d381" />
 
 Perbaikan:
+
 <img width="340" height="184" alt="image" src="https://github.com/user-attachments/assets/cf3b6b52-e679-4170-ace1-be21819cf3ae" />
 
 
