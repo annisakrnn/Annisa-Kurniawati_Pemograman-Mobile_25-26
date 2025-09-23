@@ -7,6 +7,7 @@ NIM: 2341720070
 Absen: 03
 
 **Praktikum 1:**
+
 Langkah 1 dan 2
 <img width="750" height="678" alt="Screenshot 2025-09-22 123558" src="https://github.com/user-attachments/assets/ae7a6b4e-f78f-4986-bcf1-c61b461f2763" />
 Yang terjadi tidak error dan outputnya seperti pada gambar
@@ -27,6 +28,7 @@ Menambahkan elemen nama dan NIM Anda pada kedua variabel Set tersebut dengan dua
 <img width="401" height="160" alt="image" src="https://github.com/user-attachments/assets/4674625c-6bf2-4637-81af-4667c649ba5b" />
 
 **Praktikum 3**
+
 Langkah 1 dan 2
 <img width="225" height="241" alt="image" src="https://github.com/user-attachments/assets/cd3d18e0-d06e-4cba-8578-ca099600917a" />
 - Map gifts dan nobleGases menyimpan pasangan kunci-nilai yang berbeda.
@@ -41,6 +43,7 @@ Menambahkan elemen nama dan NIM Anda pada tiap variabel di atas (gifts, nobleGas
 <img width="605" height="817" alt="Screenshot 2025-09-22 134206" src="https://github.com/user-attachments/assets/59900aea-8137-4db3-b8d4-dfa430fea89b" />
 
 **Praktikum 4**
+
 Langkah 1 dan 2
 <img width="612" height="467" alt="Screenshot 2025-09-23 190728" src="https://github.com/user-attachments/assets/9d96c652-dbb0-4636-a4f7-02864ec89eea" />
 Yang terjadi error
