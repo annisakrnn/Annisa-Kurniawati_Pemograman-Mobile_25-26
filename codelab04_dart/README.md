@@ -18,28 +18,23 @@ Yang terjadi tidak error dan outputnya seperti pada gambar
 **Praktikum 2**
 Langkah 1 dan 2
 <img width="724" height="195" alt="Screenshot 2025-09-22 132415" src="https://github.com/user-attachments/assets/045f8d75-0c87-4c78-9fdd-697e24caec92" />
-
 Yang terjadi tidak error dan outputnya seperti pada gambar
 
 Langkah 3
 <img width="719" height="411" alt="Screenshot 2025-09-22 132633" src="https://github.com/user-attachments/assets/62f7adaa-1830-4e3b-816a-2458072b48b6" />
-
 Yang terjadi tidak error dan outputnya seperti pada gambar
-
 Menambahkan elemen nama dan NIM Anda pada kedua variabel Set tersebut dengan dua fungsi berbeda yaitu .add() dan .addAll()
 <img width="401" height="160" alt="image" src="https://github.com/user-attachments/assets/4674625c-6bf2-4637-81af-4667c649ba5b" />
 
 **Praktikum 3**
 Langkah 1 dan 2
 <img width="225" height="241" alt="image" src="https://github.com/user-attachments/assets/cd3d18e0-d06e-4cba-8578-ca099600917a" />
-
 - Map gifts dan nobleGases menyimpan pasangan kunci-nilai yang berbeda.
 - Map gifts menggunakan string sebagai kunci dan dapat memiliki nilai tipe campuran.
 - Map nobleGases menggunakan integer sebagai kunci dan juga dapat memiliki nilai tipe campuran.
 
 Langkah 3
 <img width="712" height="782" alt="Screenshot 2025-09-22 132853" src="https://github.com/user-attachments/assets/7ec5d1cd-288c-4832-9a9a-db916f470dbb" />
-
 Yang terjadi tidak error dan outputnya seperti pada gambar
 
 Menambahkan elemen nama dan NIM Anda pada tiap variabel di atas (gifts, nobleGases, mhs1, dan mhs2)
@@ -48,21 +43,18 @@ Menambahkan elemen nama dan NIM Anda pada tiap variabel di atas (gifts, nobleGas
 **Praktikum 4**
 Langkah 1 dan 2
 <img width="612" height="467" alt="Screenshot 2025-09-23 190728" src="https://github.com/user-attachments/assets/9d96c652-dbb0-4636-a4f7-02864ec89eea" />
-
 Yang terjadi error
 Perbaikan:
 <img width="738" height="350" alt="Screenshot 2025-09-23 190916" src="https://github.com/user-attachments/assets/251d2d50-e2be-431b-8f2e-33dd512c9699" />
 
 Langkah 3
 <img width="296" height="289" alt="Screenshot 2025-09-23 191011" src="https://github.com/user-attachments/assets/b1ecbe61-9e53-47c5-9f69-21b4ca2324fa" />
-
 Yang terjadi error
 Perbaikan dan Menambahkan variabel list berisi NIM Anda menggunakan Spread Operators.
 <img width="807" height="568" alt="Screenshot 2025-09-23 191703" src="https://github.com/user-attachments/assets/e2de28ee-5688-496e-befc-d6e40ab67761" />
 
 Langkah 4
 <img width="666" height="74" alt="Screenshot 2025-09-23 191803" src="https://github.com/user-attachments/assets/11ceb140-63d4-4203-9b77-2d7c7953fdba" />
-
 Yang terjadi error
 Perbaikan jika promoActive = true:
 <img width="674" height="216" alt="Screenshot 2025-09-23 191944" src="https://github.com/user-attachments/assets/0f4261ea-077f-4063-9c56-7666dd8caae4" />
@@ -71,7 +63,6 @@ Perbaikan jika promoActive = false:
 
 Langkah 5
 <img width="799" height="48" alt="Screenshot 2025-09-23 192100" src="https://github.com/user-attachments/assets/d325480a-3186-460b-bf36-c56674cfaa2d" />
-
 Yang terjadi error
 Perbaikan, jika login = manager:
 <img width="802" height="194" alt="Screenshot 2025-09-23 192200" src="https://github.com/user-attachments/assets/3abf3e00-bae5-4344-b652-fca84389fd66" />
