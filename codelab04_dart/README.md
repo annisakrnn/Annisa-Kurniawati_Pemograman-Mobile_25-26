@@ -124,9 +124,11 @@ Perbaikan:
 
    - Parameter Wajib: Harus diberikan nilai saat pemanggilan fungsi.
      
-     void greet(String name, int nim) {
-     print('Hello, $name. You are NIM $nim');
-     greet('Ratnasari', 2241720007);    
+```dart
+void greet(String name, int nim) {
+  print('Hello, $name. You are NIM $nim');
+}
+greet('Annisa', 2341720070);
 }
 6. Jelaskan maksud Functions sebagai first-class objects beserta contoh sintaknya!
 7. Apa itu Anonymous Functions? Jelaskan dan berikan contohnya!
