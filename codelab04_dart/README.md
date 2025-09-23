@@ -109,6 +109,19 @@ Perbaikan:
 
 <img width="340" height="184" alt="image" src="https://github.com/user-attachments/assets/cf3b6b52-e679-4170-ace1-be21819cf3ae" />
 
+**Tugas Praktikum**
+
+1. Silakan selesaikan Praktikum 1 sampai 5, lalu dokumentasikan berupa screenshot hasil pekerjaan Anda beserta penjelasannya!
+2. Jelaskan yang dimaksud Functions dalam bahasa Dart!
+   **Jawab**
+   fungsi adalah blok kode yang dapat didefinisikan dan dipanggil untuk melakukan tugas tertentu. Fungsi memungkinkan Anda untuk membagi program menjadi bagian-bagian yang lebih kecil dan terorganisir, serta memungkinkan Anda untuk menghindari pengulangan kode.
+  
+4. Jelaskan jenis-jenis parameter di Functions beserta contoh sintaksnya!
+5. Jelaskan maksud Functions sebagai first-class objects beserta contoh sintaknya!
+6. Apa itu Anonymous Functions? Jelaskan dan berikan contohnya!
+7. Jelaskan perbedaan Lexical scope dan Lexical closures! Berikan contohnya!
+8. Jelaskan dengan contoh cara membuat return multiple value di Functions!
+
 
 
 
