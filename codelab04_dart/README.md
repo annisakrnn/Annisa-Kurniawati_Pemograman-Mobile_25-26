@@ -25,6 +25,7 @@ Yang terjadi tidak error dan outputnya seperti pada gambar
 Langkah 1 dan 2
 
 <img width="724" height="195" alt="Screenshot 2025-09-22 132415" src="https://github.com/user-attachments/assets/045f8d75-0c87-4c78-9fdd-697e24caec92" />
+
 Yang terjadi tidak error dan outputnya seperti pada gambar
 
 Langkah 3
