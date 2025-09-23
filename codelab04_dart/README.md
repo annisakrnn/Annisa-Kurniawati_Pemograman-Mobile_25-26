@@ -11,11 +11,13 @@ Absen: 03
 Langkah 1 dan 2
 
 <img width="750" height="678" alt="Screenshot 2025-09-22 123558" src="https://github.com/user-attachments/assets/ae7a6b4e-f78f-4986-bcf1-c61b461f2763" />
+
 Yang terjadi tidak error dan outputnya seperti pada gambar
 
 Langkah 3
 
 <img width="745" height="622" alt="Screenshot 2025-09-22 132236" src="https://github.com/user-attachments/assets/99a15008-5906-40a9-b71a-c9601799df57" />
+
 Yang terjadi tidak error dan outputnya seperti pada gambar
 
 **Praktikum 2**
@@ -28,6 +30,7 @@ Yang terjadi tidak error dan outputnya seperti pada gambar
 Langkah 3
 
 <img width="719" height="411" alt="Screenshot 2025-09-22 132633" src="https://github.com/user-attachments/assets/62f7adaa-1830-4e3b-816a-2458072b48b6" />
+
 Yang terjadi tidak error dan outputnya seperti pada gambar
 Menambahkan elemen nama dan NIM Anda pada kedua variabel Set tersebut dengan dua fungsi berbeda yaitu .add() dan .addAll()
 
@@ -46,9 +49,11 @@ Langkah 1 dan 2
 Langkah 3
 
 <img width="712" height="782" alt="Screenshot 2025-09-22 132853" src="https://github.com/user-attachments/assets/7ec5d1cd-288c-4832-9a9a-db916f470dbb" />
+
 Yang terjadi tidak error dan outputnya seperti pada gambar
 
 Menambahkan elemen nama dan NIM Anda pada tiap variabel di atas (gifts, nobleGases, mhs1, dan mhs2)
+
 <img width="605" height="817" alt="Screenshot 2025-09-22 134206" src="https://github.com/user-attachments/assets/59900aea-8137-4db3-b8d4-dfa430fea89b" />
 
 **Praktikum 4**
@@ -56,6 +61,7 @@ Menambahkan elemen nama dan NIM Anda pada tiap variabel di atas (gifts, nobleGas
 Langkah 1 dan 2
 
 <img width="612" height="467" alt="Screenshot 2025-09-23 190728" src="https://github.com/user-attachments/assets/9d96c652-dbb0-4636-a4f7-02864ec89eea" />
+
 Yang terjadi error
 
 Perbaikan:
@@ -75,6 +81,7 @@ Perbaikan dan Menambahkan variabel list berisi NIM Anda menggunakan Spread Opera
 Langkah 4
 
 <img width="666" height="74" alt="Screenshot 2025-09-23 191803" src="https://github.com/user-attachments/assets/11ceb140-63d4-4203-9b77-2d7c7953fdba" />
+
 Yang terjadi error
 
 Perbaikan jika promoActive = true:
@@ -88,6 +95,7 @@ Perbaikan jika promoActive = false:
 Langkah 5
 
 <img width="799" height="48" alt="Screenshot 2025-09-23 192100" src="https://github.com/user-attachments/assets/d325480a-3186-460b-bf36-c56674cfaa2d" />
+
 Yang terjadi error
 
 Perbaikan, jika login = manager:
@@ -97,6 +105,7 @@ Perbaikan, jika login = manager:
 Langkah 6
 
 <img width="591" height="233" alt="Screenshot 2025-09-23 192259" src="https://github.com/user-attachments/assets/9a4fcbc1-5ea0-49d6-81cb-655d9133c910" />
+
 Collection for di Dart menawarkan cara yang elegan dan efisien untuk membuat dan memodifikasi koleksi. Dengan sintaks yang lebih bersih dan deklaratif, Anda dapat mengurangi jumlah kode yang diperlukan, meningkatkan keterbacaan, dan membuat kode Anda lebih mudah dipelihara.
 
 **Praktikum 5**
