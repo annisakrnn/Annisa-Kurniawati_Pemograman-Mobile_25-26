@@ -55,6 +55,7 @@ Perbaikan:
 <img width="738" height="350" alt="Screenshot 2025-09-23 190916" src="https://github.com/user-attachments/assets/251d2d50-e2be-431b-8f2e-33dd512c9699" />
 
 Langkah 3
+
 <img width="296" height="289" alt="Screenshot 2025-09-23 191011" src="https://github.com/user-attachments/assets/b1ecbe61-9e53-47c5-9f69-21b4ca2324fa" />
 Yang terjadi error
 Perbaikan dan Menambahkan variabel list berisi NIM Anda menggunakan Spread Operators.
