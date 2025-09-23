@@ -217,7 +217,7 @@ Anonymous functions, juga dikenal sebagai fungsi lambda, adalah fungsi yang tida
 ```
 Penjelasan : Definisi: Fungsi add adalah fungsi lambda yang menjumlahkan dua angka. Penggunaan: Fungsi lambda digunakan dalam map() untuk menghitung kuadrat dari setiap angka dalam list numbers. Sorting: Fungsi lambda digunakan dalam sorted() untuk mengurutkan tuple berdasarkan elemen kedua.
 
-9. Jelaskan perbedaan Lexical scope dan Lexical closures! Berikan contohnya!
+6. Jelaskan perbedaan Lexical scope dan Lexical closures! Berikan contohnya!
     
 **Jawab**
 
@@ -261,7 +261,7 @@ print(counter1())  # Output: 2
 counter2 = make_counter()
 print(counter2())  # Output: 1  (counter2 adalah fungsi terpisah)
 ```
-11. Jelaskan dengan contoh cara membuat return multiple value di Functions!
+7. Jelaskan dengan contoh cara membuat return multiple value di Functions!
 
 **Jawab**
 
