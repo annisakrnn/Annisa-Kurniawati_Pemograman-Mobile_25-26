@@ -20,7 +20,7 @@ mahasiswa = ('Annisa Kurniawati', 2341720070);
 print(mahasiswa);
 
 //langkah 5
-var mahasiswa2 = ('first', a: 2, b: true, 'last');
+var mahasiswa2 = ('Annisa Kurniawati', a: 2341720070, b: true, 'NIM');
 
 print(mahasiswa2.$1); // Prints 'first'
 print(mahasiswa2.a); // Prints 2
