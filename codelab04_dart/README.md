@@ -62,6 +62,7 @@ Langkah 3
 Yang terjadi error
 
 Perbaikan dan Menambahkan variabel list berisi NIM Anda menggunakan Spread Operators.
+
 <img width="807" height="568" alt="Screenshot 2025-09-23 191703" src="https://github.com/user-attachments/assets/e2de28ee-5688-496e-befc-d6e40ab67761" />
 
 Langkah 4
