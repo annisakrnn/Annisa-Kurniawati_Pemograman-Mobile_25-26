@@ -48,6 +48,7 @@ Menambahkan elemen nama dan NIM Anda pada tiap variabel di atas (gifts, nobleGas
 **Praktikum 4**
 
 Langkah 1 dan 2
+
 <img width="612" height="467" alt="Screenshot 2025-09-23 190728" src="https://github.com/user-attachments/assets/9d96c652-dbb0-4636-a4f7-02864ec89eea" />
 Yang terjadi error
 Perbaikan:
