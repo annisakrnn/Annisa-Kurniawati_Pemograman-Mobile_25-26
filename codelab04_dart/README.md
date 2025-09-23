@@ -26,6 +26,7 @@ Langkah 3
 <img width="719" height="411" alt="Screenshot 2025-09-22 132633" src="https://github.com/user-attachments/assets/62f7adaa-1830-4e3b-816a-2458072b48b6" />
 Yang terjadi tidak error dan outputnya seperti pada gambar
 Menambahkan elemen nama dan NIM Anda pada kedua variabel Set tersebut dengan dua fungsi berbeda yaitu .add() dan .addAll()
+
 <img width="401" height="160" alt="image" src="https://github.com/user-attachments/assets/4674625c-6bf2-4637-81af-4667c649ba5b" />
 
 **Praktikum 3**
