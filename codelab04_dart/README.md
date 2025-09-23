@@ -123,13 +123,14 @@ Perbaikan:
    **Jawab**
 
    - Parameter Wajib: Harus diberikan nilai saat pemanggilan fungsi.
-     
-```dart
+     ```dart
 void greet(String name, int nim) {
    print('Hello, $name. You are NIM $nim');
    greet('Annisa', 2341720070); 
 }
 ```
+   - Parameter Opsional Posisi: Parameter yang dapat diisi atau tidak, dan diletakkan dalam kurung siku [].
+     
 6. Jelaskan maksud Functions sebagai first-class objects beserta contoh sintaknya!
 7. Apa itu Anonymous Functions? Jelaskan dan berikan contohnya!
 8. Jelaskan perbedaan Lexical scope dan Lexical closures! Berikan contohnya!
