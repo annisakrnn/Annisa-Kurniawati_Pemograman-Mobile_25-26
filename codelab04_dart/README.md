@@ -130,12 +130,181 @@ void greet(String name, int nim) {
 }
 ```
    - Parameter Opsional Posisi: Parameter yang dapat diisi atau tidak, dan diletakkan dalam kurung siku [].
-     
-6. Jelaskan maksud Functions sebagai first-class objects beserta contoh sintaknya!
-7. Apa itu Anonymous Functions? Jelaskan dan berikan contohnya!
-8. Jelaskan perbedaan Lexical scope dan Lexical closures! Berikan contohnya!
-9. Jelaskan dengan contoh cara membuat return multiple value di Functions!
+```dart
+void greet({String? name, int? nim}) {
+   print('Hello, $name! nim: $nim');
+ }
+greet(name: 'Annisa', nim: 2341720070);
+```
+   - Parameter Opsional Named: Parameter yang diidentifikasi dengan nama saat pemanggilan fungsi, diletakkan dalam kurung kurawal {}.
+```dart
+void greet(String name, [String? nim]) {
+     print('Hello, $name! Your NIM is $nim');
+   }
+   greet('Annisa');
+```
+   - Parameter Named dengan Nilai Default: Parameter named dengan nilai default yang digunakan jika parameter tidak diberikan.
+```dart
+ void greet({String name = 'Guest', String nim = 'Unknown'}) {
+     print('Hello, $name! Your NIM is $nim.');
+ }
+ void main() {
+ greet();
+ greet(name: 'Annisa');
+ greet(nim: '2341720070');
+ greet(name: 'Annisa', nim: '2341720070');
+ }
+```
+ 
+4. Jelaskan maksud Functions sebagai first-class objects beserta contoh sintaknya!
 
+**Jawab**
+
+Functions as first-class objects berarti bahwa dalam bahasa pemrograman tertentu, fungsi dapat diperlakukan dengan cara yang sama seperti objek lainnya.
+```dart
+   # Menyimpan fungsi dalam variabel
+ def greet(name):
+     return f"Hello, {name}!"
+
+ greeting = greet  # Menyimpan fungsi ke variabel
+
+ print(greeting("Ratna"))  # Output: Hello, Ratna!
+
+ # Mengoper fungsi sebagai argumen
+ def apply_function(func, value):
+     return func(value)
+
+ result = apply_function(greet, "Ratna")
+ print(result)  # Output: Hello, Ratna!
+
+ # Mengembalikan fungsi dari fungsi lain
+ def create_multiplier(multiplier):
+     def multiply(x):
+         return x * multiplier
+     return multiply
+
+ double = create_multiplier(2)
+ print(double(5))  # Output: 10
+
+ # Menyimpan fungsi dalam list
+ functions = [greet, double]
+ for func in functions:
+     print(func("Ratna"))  # Output: Hello, Ratna! dan 10
+```
+
+5. Apa itu Anonymous Functions? Jelaskan dan berikan contohnya!
+   
+**Jawab**
+
+Anonymous functions, juga dikenal sebagai fungsi lambda, adalah fungsi yang tidak memiliki nama dan biasanya ditulis dalam satu baris. Fungsi ini sering digunakan ketika memerlukan fungsi kecil untuk operasi tertentu dan tidak ingin mendefinisikan fungsi lengkap.
+```dart
+  # Mendefinisikan fungsi lambda untuk penjumlahan
+ add = lambda x, y: x + y
+
+ print(add(5, 3))  # Output: 8
+
+ # Menggunakan fungsi lambda sebagai argumen
+ numbers = [1, 2, 3, 4, 5]
+ squared = list(map(lambda x: x ** 2, numbers))
+
+ print(squared)  # Output: [1, 4, 9, 16, 25]
+
+ # Menggunakan fungsi lambda dalam sorting
+ points = [(1, 2), (4, 1), (2, 3)]
+ points_sorted = sorted(points, key=lambda point: point[1])
+
+ print(points_sorted)  # Output: [(4, 1), (1, 2), (2, 3)]
+```
+Penjelasan : Definisi: Fungsi add adalah fungsi lambda yang menjumlahkan dua angka. Penggunaan: Fungsi lambda digunakan dalam map() untuk menghitung kuadrat dari setiap angka dalam list numbers. Sorting: Fungsi lambda digunakan dalam sorted() untuk mengurutkan tuple berdasarkan elemen kedua.
+
+9. Jelaskan perbedaan Lexical scope dan Lexical closures! Berikan contohnya!
+    
+**Jawab**
+
+Perbedaan Utama: Lexical Scope: Menunjukkan aturan di mana variabel dapat diakses. Variabel dapat diakses berdasarkan di mana fungsi didefinisikan. Lexical Closures: Adalah hasil dari penggunaan lexical scope, di mana fungsi dapat mengingat dan mengakses variabel dari lingkungannya bahkan setelah fungsi luar dieksekusi.
+
+   - Lexical Scope Lexical scope (atau static scope) berarti bahwa lokasi variabel ditentukan oleh tempat fungsi ditulis (ditentukan oleh struktur kode) dan bukan oleh lokasi di mana fungsi dipanggil.
+```dart
+  # Mendefinisikan fungsi lambda untuk penjumlahan
+ add = lambda x, y: x + y
+
+ print(add(5, 3))  # Output: 8
+
+ # Menggunakan fungsi lambda sebagai argumen
+ numbers = [1, 2, 3, 4, 5]
+ squared = list(map(lambda x: x ** 2, numbers))
+
+ print(squared)  # Output: [1, 4, 9, 16, 25]
+
+ # Menggunakan fungsi lambda dalam sorting
+ points = [(1, 2), (4, 1), (2, 3)]
+ points_sorted = sorted(points, key=lambda point: point[1])
+
+ print(points_sorted)  # Output: [(4, 1), (1, 2), (2, 3)]
+```
+   - Lexical Closures Lexical closures adalah fungsi yang "membawa" variabel-variabel dari ruang lingkup luar ke dalam dirinya. Ini terjadi ketika fungsi didefinisikan di dalam fungsi lain dan dapat mengakses variabel dari fungsi luar tersebut, bahkan setelah fungsi luar selesai dieksekusi. Dengan kata lain, closure adalah fungsi yang "menutup" variabel dari lingkungannya.
+```dart
+  def make_counter():
+    count = 0  # Variabel count didefinisikan di make_counter
+
+  def counter():
+        nonlocal count  # Menunjukkan bahwa kita akan menggunakan count dari make_counter
+        count += 1
+        return count
+
+    return counter
+
+counter1 = make_counter()
+print(counter1())  # Output: 1
+print(counter1())  # Output: 2
+
+counter2 = make_counter()
+print(counter2())  # Output: 1  (counter2 adalah fungsi terpisah)
+```
+11. Jelaskan dengan contoh cara membuat return multiple value di Functions!
+
+**Jawab**
+
+Untuk mengembalikan beberapa nilai dari sebuah fungsi di Python, Anda dapat menggunakan tuple, list, atau dictionary. cara yang paling umum dan sederhana adalah dengan menggunakan tuple, yang dapat dilakukan dengan memisahkan nilai yang ingin dikembalikan dengan koma. Menggunakan tuple adalah metode yang paling umum dan langsung, sedangkan list dan dictionary memberikan cara yang lebih terstruktur untuk menyimpan dan mengakses nilai.
+
+- Menggunakan Tuple
+```dart
+def calculate_statistics(numbers):
+total = sum(numbers)
+count = len(numbers)
+average = total / count
+return total, count, average  # Mengembalikan beberapa nilai sebagai tuple
+
+# Memanggil fungsi
+result = calculate_statistics([10, 20, 30, 40, 50])
+
+# Mengakses nilai yang dikembalikan
+total, count, average = result
+
+print("Total:", total)       # Output: Total: 150
+print("Count:", count)       # Output: Count: 5
+print("Average:", average)   # Output: Average: 30.0
+```
+- Menggunakan List
+  ```dart
+def get_fruit():
+return ["Apple", "Orange", "Watermelon"]  # Mengembalikan list
+
+fruit = get_fruit()
+print(names)  # Output: ['Apple', 'Orange', 'Watermelon']
+```
+- Menggunakan Dictionary
+```dart
+def get_person_info():
+return {
+    "nama": "Ratnasari",
+    "NIM": 2241720007,
+    "prodi": "Teknik Infoematika"
+}
+
+person_info = get_person_info()
+print(person_info)  # Output: {'nama': 'Ratnasari', 'NIM': 2241720007, 'prodi': 'Teknik Infoematika'}
+```
 
 
 
