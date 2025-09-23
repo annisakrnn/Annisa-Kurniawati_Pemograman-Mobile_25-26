@@ -17,6 +17,7 @@ Langkah 3
 Yang terjadi tidak error dan outputnya seperti pada gambar
 
 **Praktikum 2**
+
 Langkah 1 dan 2
 <img width="724" height="195" alt="Screenshot 2025-09-22 132415" src="https://github.com/user-attachments/assets/045f8d75-0c87-4c78-9fdd-697e24caec92" />
 Yang terjadi tidak error dan outputnya seperti pada gambar
@@ -31,6 +32,7 @@ Menambahkan elemen nama dan NIM Anda pada kedua variabel Set tersebut dengan dua
 
 Langkah 1 dan 2
 <img width="225" height="241" alt="image" src="https://github.com/user-attachments/assets/cd3d18e0-d06e-4cba-8578-ca099600917a" />
+
 - Map gifts dan nobleGases menyimpan pasangan kunci-nilai yang berbeda.
 - Map gifts menggunakan string sebagai kunci dan dapat memiliki nilai tipe campuran.
 - Map nobleGases menggunakan integer sebagai kunci dan juga dapat memiliki nilai tipe campuran.
