@@ -7,9 +7,20 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  @override
+@override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: Scaffold(body: MyLayout()));
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: const Text("Contoh TextField")),
+        body: const TextField(
+          obscureText: false,
+          decoration: InputDecoration(
+            border: OutlineInputBorder(),
+            labelText: 'Nama',
+          ),
+        ),
+      ),
+    );
   }
 }
 
