@@ -26,11 +26,11 @@ Jika sudah selesai proses pembuatan project baru, pastikan tampilan seperti beri
 
 # Praktikum 2
 
-**Saat dijalankan melalui android studio melalui **
+**Saat dijalankan melalui android studio**
 
 <img width="1920" height="1080" alt="Screenshot 2025-09-27 070408" src="https://github.com/user-attachments/assets/cd22f915-3e67-4da8-b290-f2e5c2e0fbdb" />
 
-**Saat dijalankan melalui android studio**
+**Saat dijalankan melalui android device**
  
 ![WhatsApp Image 2025-09-28 at 11 26 45_50e7832d](https://github.com/user-attachments/assets/cdb19eba-2c6f-446d-a235-2deff18a6100)
 
