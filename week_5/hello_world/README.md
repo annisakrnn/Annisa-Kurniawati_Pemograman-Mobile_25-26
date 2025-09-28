@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 # hello_world
 
 A new Flutter project.
@@ -112,4 +111,3 @@ Date and Time Pickers termasuk pada kategori input dan selection widget, berikut
 
 
 
->>>>>>> facb95cb30cbbbb3cbfea5c554191cc64aa054ac
