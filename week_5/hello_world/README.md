@@ -10,7 +10,8 @@ Annisa Kurniawati / 2341720070 / 03
 **Langkah 1**
 
 Buka VS Code, lalu tekan tombol Ctrl + Shift + P maka akan tampil Command Palette, lalu ketik Flutter. Pilih New Application Project.
-<img width="324" height="55" alt="image" src="https://github.com/user-attachments/assets/0329a000-ec56-42a1-a3dd-445a241f2031" />
+<img width="648" height="110" alt="image" src="https://github.com/user-attachments/assets/81cad2f1-10a7-46e0-9c34-37a12a0fa8d2" />
+
 
 **Langkah 2**
 
@@ -19,7 +20,8 @@ Kemudian buat folder sesuai style laporan praktikum yang Anda pilih. Disarankan 
 **Langkah 3**
 
 Buat nama project flutter hello_world seperti berikut, lalu tekan Enter. Tunggu hingga proses pembuatan project baru selesai.
-<img width="391" height="80" alt="image" src="https://github.com/user-attachments/assets/2608f585-b778-46df-8daa-dfac6a663561" />
+<img width="782" height="159" alt="image" src="https://github.com/user-attachments/assets/3f9efb54-39ea-40e8-8e41-131863c8f93b" />
+
 
 **Langkah 4**
 
@@ -29,17 +31,20 @@ Jika sudah selesai proses pembuatan project baru, pastikan tampilan seperti beri
 
 **Saat dijalankan melalui android studio**
 
-<img width="1920" height="1080" alt="Screenshot 2025-09-27 070408" src="https://github.com/user-attachments/assets/cd22f915-3e67-4da8-b290-f2e5c2e0fbdb" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6ca6f84e-10d0-4180-910a-81fa521e147b" />
+
 
 **Saat dijalankan melalui android device**
  
-![WhatsApp Image 2025-09-28 at 11 26 45_50e7832d](https://github.com/user-attachments/assets/cdb19eba-2c6f-446d-a235-2deff18a6100)
+<img width="720" height="1600" alt="image" src="https://github.com/user-attachments/assets/6bb89ed5-4d8e-48de-915e-696a93505ec2" />
+
 
 # Praktikum 3
 
 Sudah di push di repository lama tanpa membuat repository yang baru namun saat push sesuai dengan langkah pada gitbook.
 
-<img width="1920" height="1080" alt="Screenshot 2025-09-27 071354" src="https://github.com/user-attachments/assets/4549385c-c5fa-4009-807a-69dfc8c96286" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/28dc8970-16d9-462a-8765-feb2f7ddb109" />
+
 
 # Praktikum 4
 
@@ -47,13 +52,15 @@ Sudah di push di repository lama tanpa membuat repository yang baru namun saat p
 
 Buat folder baru basic_widgets di dalam folder lib. Kemudian buat file baru di dalam basic_widgets dengan nama text_widget.dart. Ketik atau salin kode program berikut ke project hello_world Anda pada file text_widget.dart.
 
-<img width="1920" height="1080" alt="Screenshot 2025-09-28 101207" src="https://github.com/user-attachments/assets/edeb408a-92d0-4063-88e8-2eaae5e18bb2" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/472632a6-be4a-4035-8666-7bb7d1f5ee8c" />
+
 
 **Langkah 2: Image Widget**
 
 Buat sebuah file image_widget.dart di dalam folder basic_widgets dengan isi kode berikut.
 
-<img width="1920" height="1080" alt="Screenshot 2025-09-28 101906" src="https://github.com/user-attachments/assets/d3c6dadb-718f-45a2-864a-a8152a4e7ca3" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a411d05d-fc01-4cd3-9bee-a50a2d40a62a" />
+
 
 # Praktikum 5
 
@@ -61,7 +68,8 @@ Buat sebuah file image_widget.dart di dalam folder basic_widgets dengan isi kode
 
 Buat file di basic_widgets > loading_cupertino.dart. Import stateless widget dari material dan cupertino. Lalu isi kode di dalam method Widget build adalah sebagai berikut.
 
-<img width="651" height="621" alt="Screenshot 2025-09-28 103248" src="https://github.com/user-attachments/assets/5ce49e35-4e26-41c2-932d-14bf3ca3036f" />
+<img width="651" height="621" alt="image" src="https://github.com/user-attachments/assets/6395bc68-4520-415d-bd9d-957cb5a1094c" />
+
 
 **Langkah 2: Floating Action Button (FAB)**
 
@@ -69,33 +77,39 @@ Button widget terdapat beberapa macam pada flutter yaitu ButtonBar, DropdownButt
 
 Buat file di basic_widgets > fab_widget.dart. Import stateless widget dari material. Lalu isi kode di dalam method Widget build adalah sebagai berikut.
 
-<img width="559" height="479" alt="Screenshot 2025-09-28 103305" src="https://github.com/user-attachments/assets/98463748-28db-4502-a2c7-f3b183df46a8" />
+<img width="559" height="479" alt="image" src="https://github.com/user-attachments/assets/7a8c6a04-d0e3-49bf-a426-6d7c22ff328b" />
+
 
 **Langkah 3: Scaffold Widget**
 
 Scaffold widget digunakan untuk mengatur tata letak sesuai dengan material design.
 
-<img width="1920" height="1080" alt="Screenshot 2025-09-28 105703" src="https://github.com/user-attachments/assets/3d00e5eb-f66f-4baa-a5df-dde30b54302a" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/fae5421f-bcee-4ecb-93a3-bb64f689a31e" />
+
 
 **Langkah 4: Dialog Widget**
 
 Dialog widget pada flutter memiliki dua jenis dialog yaitu AlertDialog dan SimpleDialog.
 
-<img width="1920" height="1080" alt="Screenshot 2025-09-28 110805" src="https://github.com/user-attachments/assets/2c1214cc-766c-42e0-b867-936f0daa073c" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7e66f6d3-8340-481e-8a05-fb10fc64569c" />
 
-<img width="1920" height="1080" alt="Screenshot 2025-09-28 110815" src="https://github.com/user-attachments/assets/10048525-43b4-4975-b525-8390eaee3291" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a02d3bb3-b67e-4f06-8b0c-b1dc6d12c1c7" />
+
 
 **Langkah 5: Input dan Selection Widget**
 
 Flutter menyediakan widget yang dapat menerima input dari pengguna aplikasi yaitu antara lain Checkbox, Date and Time Pickers, Radio Button, Slider, Switch, TextField.
 
-<img width="1920" height="1080" alt="Screenshot 2025-09-28 111029" src="https://github.com/user-attachments/assets/f444f4aa-efbb-4122-b694-f554a7f6e071" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/bfa123a7-0edf-4d57-9a1b-5c01c5506831" />
+
 
 **Langkah 6: Date and Time Pickers**
 
 Date and Time Pickers termasuk pada kategori input dan selection widget, berikut adalah contoh penggunaan Date and Time Pickers. Date and Time Pickers
 
-<img width="1920" height="1080" alt="Screenshot 2025-09-28 111306" src="https://github.com/user-attachments/assets/53055415-2fd9-4eb9-be7d-a4d363b4743d" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5ee1f6b4-98d0-4c04-b592-c6dd9934c17c" />
+
 
 
 
