@@ -66,11 +66,16 @@ class BigCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context); // Mendapatkan tema saat ini
+    final style = theme.textTheme.displayMedium!.copyWith(
+      color: theme
+          .colorScheme
+          .onPrimary, // Menggunakan warna teks yang sesuai dengan warna utama
+    );
     return Card(
       color: theme.colorScheme.primary, // Menggunakan warna utama dari tema
       child: Padding(
         padding: const EdgeInsets.all(20),
-        child: Text(pair.asLowerCase),
+        child: Text(pair.asLowerCase, style: style), //
       ),
     );
   }
