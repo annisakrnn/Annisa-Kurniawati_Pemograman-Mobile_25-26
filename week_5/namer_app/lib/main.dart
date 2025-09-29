@@ -27,6 +27,12 @@ class MyApp extends StatelessWidget {
 
 class MyAppState extends ChangeNotifier {
   var current = WordPair.random();
+
+  //Tambah
+  void getNext() {
+    current = WordPair.random();
+    notifyListeners();
+  }
 }
 
 class MyHomePage extends StatelessWidget {
@@ -43,7 +49,7 @@ class MyHomePage extends StatelessWidget {
           // Menambahkan tombol reload
           ElevatedButton(
             onPressed: () {
-              print('button pressed!');
+              appState.getNext(); // Memanggil method getNext dari MyAppState
             },
             child: Text('Next'),
           ),
