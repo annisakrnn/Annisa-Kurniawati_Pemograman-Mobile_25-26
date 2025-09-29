@@ -33,6 +33,18 @@ class MyAppState extends ChangeNotifier {
     current = WordPair.random();
     notifyListeners();
   }
+
+  //Menambahkan code
+  var favorites = <WordPair>[];
+
+  void toggleFavorite() {
+    if (favorites.contains(current)) {
+      favorites.remove(current);
+    } else {
+      favorites.add(current);
+    }
+    notifyListeners();
+  }
 }
 
 class MyHomePage extends StatelessWidget {
@@ -49,11 +61,15 @@ class MyHomePage extends StatelessWidget {
             BigCard(pair: pair), // Mengganti Text dengan BigCard
             SizedBox(height: 10), // Menambahkan jarak antara kartu dan tombol
             //Menambah tombol next
-            ElevatedButton(
-              onPressed: () {
-                appState.getNext(); // Memanggil method getNext
-              },
-              child: Text('Next'),
+            Row(
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    appState.getNext(); // Memanggil method getNext
+                  },
+                  child: Text('Next'),
+                ),
+              ],
             ),
           ],
         ),
