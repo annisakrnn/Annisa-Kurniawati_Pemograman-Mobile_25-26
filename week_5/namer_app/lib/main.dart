@@ -39,6 +39,14 @@ class MyHomePage extends StatelessWidget {
         children: [
           Text('A random  AWESOME idea:'),
           Text(appState.current.asLowerCase),
+
+          // Menambahkan tombol reload
+          ElevatedButton(
+            onPressed: () {
+              print('button pressed!');
+            },
+            child: Text('Next'),
+          ),
         ],
       ),
     );
