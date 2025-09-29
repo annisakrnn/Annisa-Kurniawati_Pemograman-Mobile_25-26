@@ -43,6 +43,7 @@ class MyHomePage extends StatelessWidget {
 
     return Scaffold(
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text('A random idea:'),
           BigCard(pair: pair), // Mengganti Text dengan BigCard
@@ -75,7 +76,11 @@ class BigCard extends StatelessWidget {
       color: theme.colorScheme.primary, // Menggunakan warna utama dari tema
       child: Padding(
         padding: const EdgeInsets.all(20),
-        child: Text(pair.asLowerCase, style: style), //
+        child: Text(
+          pair.asLowerCase,
+          style: style,
+          semanticsLabel: "${pair.first} ${pair.second}",
+        ),
       ),
     );
   }
