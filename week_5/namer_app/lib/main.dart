@@ -62,6 +62,7 @@ class MyHomePage extends StatelessWidget {
             SizedBox(height: 10), // Menambahkan jarak antara kartu dan tombol
             //Menambah tombol next
             Row(
+              mainAxisSize: MainAxisSize.min,
               children: [
                 ElevatedButton(
                   onPressed: () {
