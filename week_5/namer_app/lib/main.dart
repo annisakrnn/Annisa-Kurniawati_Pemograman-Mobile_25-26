@@ -46,8 +46,8 @@ class MyHomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('A random idea:'),
             BigCard(pair: pair), // Mengganti Text dengan BigCard
+            SizedBox(height: 10), // Menambahkan jarak antara kartu dan tombol
             //Menambah tombol next
             ElevatedButton(
               onPressed: () {
