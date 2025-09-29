@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
 class MyAppState extends ChangeNotifier {
   var current = WordPair.random();
 
-  //Tambah
+  //Tambah method getNext
   void getNext() {
     current = WordPair.random();
     notifyListeners();
@@ -45,12 +45,11 @@ class MyHomePage extends StatelessWidget {
       body: Column(
         children: [
           Text('A random idea:'),
-          Text(pair.asLowerCase),
-
-          // Menambahkan tombol reload
+          BigCard(pair: pair), // Mengganti Text dengan BigCard
+          //Menambah tombol next
           ElevatedButton(
             onPressed: () {
-              appState.getNext(); // Memanggil method getNext dari MyAppState
+              appState.getNext(); // Memanggil method getNext
             },
             child: Text('Next'),
           ),
@@ -63,11 +62,14 @@ class MyHomePage extends StatelessWidget {
 class BigCard extends StatelessWidget {
   const BigCard({super.key, required this.pair});
   final WordPair pair;
+
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(20),
-      child: Text(pair.asLowerCase),
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Text(pair.asLowerCase),
+      ),
     );
   }
 }
