@@ -59,11 +59,12 @@ class MyApp extends StatelessWidget {
         _buildButtonColumn(color, Icons.share, 'SHARE'),
       ],
     );
+
     return MaterialApp(
       title: 'Flutter layout: Anniss Kurniawati 2341720070',
       home: Scaffold(
         appBar: AppBar(title: const Text('My App')),
-        body: Column(children: [titleSection]),
+        body: Column(children: [titleSection, buttonSection]),
       ),
     );
   }
