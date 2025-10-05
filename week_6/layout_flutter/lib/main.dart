@@ -49,6 +49,16 @@ class MyApp extends StatelessWidget {
   //langkah 2
   @override
   Widget build(BuildContext context) {
+    Color color = Theme.of(context).primaryColor;
+
+    Widget buttonSection = Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        _buildButtonColumn(color, Icons.call, 'CALL'),
+        _buildButtonColumn(color, Icons.near_me, 'ROUTE'),
+        _buildButtonColumn(color, Icons.share, 'SHARE'),
+      ],
+    );
     return MaterialApp(
       title: 'Flutter layout: Anniss Kurniawati 2341720070',
       home: Scaffold(
