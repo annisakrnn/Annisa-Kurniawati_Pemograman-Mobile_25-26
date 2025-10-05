@@ -37,7 +37,8 @@ Perhatikan area yang memerlukan alignment, padding, atau borders.
 
 Hasil: 
 
-<img width="1920" height="1080" alt="Screenshot 2025-10-02 145907" src="https://github.com/user-attachments/assets/fd94b3b6-db35-41f6-beed-647c4e39027d" />
+<img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/bf4dc16c-1a2e-49a0-864f-b14e4910875b" />
+
 
 # Praktikum 2: Implementasi button row
 
@@ -77,7 +78,6 @@ Hasil:
 
 <img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/36fd3560-e992-44c7-b3bf-09eff6e8ed36" />
 
-# Tugas Praktikum 1
 
 
 
