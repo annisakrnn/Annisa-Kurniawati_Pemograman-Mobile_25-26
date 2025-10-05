@@ -104,25 +104,30 @@ Aplikasi Material
 
 <img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/09d3b0b9-10b1-470f-8c0f-94c280eb55c0" />
 
-**Tata beberapa widget secara vertikal dan horizontal**
-
-Row
+**Tata beberapa widget**
 
 <img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/bd39a9c0-d515-47a9-b979-a367a59ebe22" />
 
-Column
-
-<img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/b5f7415a-9376-43f7-b1b7-6f9000f8587f" />
-
-**Menyusun Baris dan Kolom**
-
-<img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/33027375-bdb9-43bb-8bd0-2c21a416d063" />
-
 **Tampilan Grid**
-**Tampilan Daftar**
+
+<img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/ab830a1b-d525-4e4a-a146-a21c1472e3c2" />
+
+**Tampilan Daftar Warna**
+
+<img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/8ad35de6-9930-4dac-90ce-941e2a1f96a8" />
+
 **Tumpukan**
+
+<img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/37438759-e906-4556-b6cf-08e598c9195e" />
+
 **Kartu**
+
+<img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/d09cf76a-064f-4633-969e-9f36d719db04" />
+
 **ListTile**
+
+<img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/8cb0244a-923d-4bfc-bc9d-cf53ca9e82bb" />
+
 
 
 
