@@ -14,10 +14,11 @@ class MyApp extends StatelessWidget {
     const String appTitle = 'Flutter layout demo';
     return MaterialApp(
       title: appTitle,
-      home: Scaffold(
-        appBar: AppBar(title: const Text(appTitle)),
-        body: const Center(child: Text('Hello World')),
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
       ),
+      home: const MyHomePage(title: appTitle),
     );
   }
 }
@@ -97,6 +98,18 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ),
                   ),
+                ],
+              ),
+            ),
+            // Additional Layout Example: Row with Images
+            Container(
+              padding: const EdgeInsets.symmetric(vertical: 16.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Image.asset('assets/img1.jpeg'),
+                  Image.asset('assets/img2.jpeg'),
+                  Image.asset('assets/img3.jpeg'),
                 ],
               ),
             ),
