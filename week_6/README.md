@@ -80,6 +80,54 @@ Hasil:
 
 # Tugas Praktikum 1
 
+# Tata letak widget
+
+**1. Pilih widget tata letak**
+
+<img width="89" height="22" alt="image" src="https://github.com/user-attachments/assets/c43cb60b-ae4f-454d-9449-c8f06784eb28" />
+
+**2. Buat widget yang terlihat**
+
+<img width="75" height="22" alt="image" src="https://github.com/user-attachments/assets/32e1369d-c390-4a3e-89dc-5efe9150c0c2" />
+
+**3. Tambahkan widget yang terlihat ke widget tata letak**
+
+<img width="89" height="22" alt="image" src="https://github.com/user-attachments/assets/c43cb60b-ae4f-454d-9449-c8f06784eb28" />
+
+**4. Tambahkan widget tata letak ke halaman**
+
+Aplikasi Standar
+
+<img width="1920" height="1080" alt="Screenshot 2025-10-05 125048" src="https://github.com/user-attachments/assets/47407fcc-01c7-4209-9ee2-a6c9e517669c" />
+
+Aplikasi Material
+
+<img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/09d3b0b9-10b1-470f-8c0f-94c280eb55c0" />
+
+**Tata beberapa widget secara vertikal dan horizontal**
+
+Row
+
+<img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/bd39a9c0-d515-47a9-b979-a367a59ebe22" />
+
+Column
+
+<img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/b5f7415a-9376-43f7-b1b7-6f9000f8587f" />
+
+**Menyusun Baris dan Kolom**
+
+<img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/33027375-bdb9-43bb-8bd0-2c21a416d063" />
+
+**Tampilan Grid**
+**Tampilan Daftar**
+**Tumpukan**
+**Kartu**
+**ListTile**
+
+
+
+
+
 
 
 
