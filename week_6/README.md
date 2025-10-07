@@ -264,6 +264,65 @@ Item pada ListView saat ini ketika ditekan masih belum memberikan aksi tertentu.
 
 Untuk menambahkan sentuhan, letakkan cursor pada widget pembuka Card. Kemudian gunakan shortcut quick fix dari VSCode (Ctrl + . pada Windows atau Cmd + . pada MacOS). Sorot menu wrap with widget... Ubah nilai widget menjadi InkWell serta tambahkan named argument onTap yang berisi fungsi untuk berpindah ke halaman ItemPage. Ilustrasi potongan kode dapat anda lihat pada potongan berikut.
 
+```dart
+import 'package:flutter/material.dart';
+import 'package:belanja/models/item.dart';
+import 'package:belanja/pages/item_page.dart';
+
+class HomePage extends StatelessWidget {
+  final List<Item> items = [
+    Item(name: 'Sugar', price: 5000),
+    Item(name: 'Salt', price: 2000),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Home Page'),
+      ),
+      body: Container(
+        margin: const EdgeInsets.all(8),
+        child: ListView.builder(
+          padding: const EdgeInsets.all(8),
+          itemCount: items.length,
+          itemBuilder: (context, index) {
+            final item = items[index];
+            return InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ItemPage(item: item), // Kirim item yang dipilih ke ItemPage
+                  ),
+                );
+              },
+              child: Card(
+                child: Container(
+                  margin: const EdgeInsets.all(8),
+                  child: Row(
+                    children: [
+                      Expanded(child: Text(item.name)),
+                      Expanded(
+                        child: Text(
+                          item.price.toString(),
+                          textAlign: TextAlign.end,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            );
+          },
+        ),
+      ),
+    );
+  }
+}     
+```
+
+
 # Tugas Praktikum 2
 
 
