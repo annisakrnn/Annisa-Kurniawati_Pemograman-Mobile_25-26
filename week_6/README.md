@@ -172,7 +172,7 @@ class ItemPage extends StatelessWidget {
 
 Setelah kedua halaman telah dibuat dan didefinisikan, bukalah file main.dart. Pada langkah ini anda akan mendefinisikan Route untuk kedua halaman tersebut. Definisi penamaan route harus bersifat unique. Halaman HomePage didefinisikan sebagai /. Dan halaman ItemPage didefinisikan sebagai /item. Untuk mendefinisikan halaman awal, anda dapat menggunakan named argument initialRoute. Gambaran tahapan ini, dapat anda lihat pada potongan kode berikut.
 
-``dart
+```dart
 import 'package:flutter/material.dart';
 import 'package:belanja/pages/home_page.dart';
 import 'package:belanja/pages/item_page.dart';
@@ -185,14 +185,14 @@ void main() {
       '/item': (context) => const ItemPage(),
     },
   ));
-}
+
 ```
 
 **Langkah 4: Membuat data model**
 
 Sebelum melakukan perpindahan halaman dari HomePage ke ItemPage, dibutuhkan proses pemodelan data. Pada desain mockup, dibutuhkan dua informasi yaitu nama dan harga. Untuk menangani hal ini, buatlah sebuah file dengan nama item.dart dan letakkan pada folder models. Pada file ini didefinisikan pemodelan data yang dibutuhkan. Ilustrasi kode yang dibutuhkan, dapat anda lihat pada potongan kode berikut.
 
-``dart
+```dart
 class Item {
   String name;
   int price;
