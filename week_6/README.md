@@ -221,7 +221,7 @@ Pada halaman HomePage terdapat ListView widget. Sumber data ListView diambil dar
 
 Untuk menampilkan ListView pada praktikum ini digunakan itemBuilder. Data diambil dari definisi model yang telah dibuat sebelumnya. Untuk menunjukkan batas data satu dan berikutnya digunakan widget Card. Kode yang telah umum pada bagian ini tidak ditampilkan. Gambaran kode yang dibutuhkan dapat anda lihat sebagai berikut.
 
-``dart
+```dart
 @override
   Widget build(BuildContext context) {
   return Scaffold(
