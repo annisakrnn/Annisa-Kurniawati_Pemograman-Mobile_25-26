@@ -141,17 +141,17 @@ Buatlah dua buah file dart dengan nama home_page.dart dan item_page.dart pada fo
 
 home_page
 
-''
+```dart
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    //TODO: implement build
+    // TODO: implement build
     throw UnimplementedError();
   }
-} 
-''
+}
+
 
 **Langkah 3: Lengkapi Kode di main.dart**
 
