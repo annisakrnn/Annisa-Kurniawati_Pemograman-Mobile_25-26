@@ -56,7 +56,8 @@ Buka file main.dart lalu tambahkan di dalam children: pada class _MyHomePageStat
 
   Jawab:
 
-  Fungsi kode tersebut ialah untuk menambahkan plugin auto_size_text yang berguna untuk menyesuaikan ukuran teks secara otomatis agar sesuai dengan ruang yang tersedia.
+  Fungsi kode tersebut ialah untuk menambahkan plugin auto_size_text yang berguna untuk         menyesuaikan ukuran teks secara otomatis agar sesuai dengan ruang yang tersedia.
+  
 3. Jelaskan maksud dari langkah 5 pada praktikum tersebut!
 
   Jawab:
