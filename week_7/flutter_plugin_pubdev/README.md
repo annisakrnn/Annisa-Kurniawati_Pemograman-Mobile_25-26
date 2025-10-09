@@ -60,22 +60,28 @@ Buka file main.dart lalu tambahkan di dalam children: pada class _MyHomePageStat
   
 3. Jelaskan maksud dari langkah 5 pada praktikum tersebut!
 
-  Jawab:
-
-  untuk menambahkan variabel text ke dalam widget RedTextWidget sebagai parameter agar widget   tersebut bisa menerima teks dari luar. Dengan mendefinisikan final String text; dan           menambahkannya sebagai parameter di constructor const RedTextWidget({Key? key, required       this.text}) : super(key: key);, memungkinkan untuk mengirim nilai text saat membuat           instance RedTextWidget, sehingga teks bisa disesuaikan sesuai kebutuhan.
+   Jawab:
+   
+   untuk menambahkan variabel text ke dalam widget RedTextWidget sebagai parameter agar
+   widget tersebut bisa menerima teks dari luar. Dengan mendefinisikan final String text; dan
+   menambahkannya sebagai parameter di constructor const RedTextWidget({Key? key, required
+   this.text}) : super(key: key);, memungkinkan untuk mengirim nilai text saat membuat
+   instance RedTextWidget, sehingga teks bisa disesuaikan sesuai kebutuhan.
   
-4. Pada langkah 6 terdapat dua widget yang ditambahkan, jelaskan fungsi dan perbedaannya!
+5. Pada langkah 6 terdapat dua widget yang ditambahkan, jelaskan fungsi dan perbedaannya!
 
    Jawab:
 
    dua widget Container ditambahkan dengan tujuan menampilkan teks yang berbeda.
-   - Widget pertama adalah RedTextWidget yang menggunakan plugin auto_size_text untuk membuat      teks otomatis menyesuaikan ukuran lebar kontainer kuning berukuran 50 piksel, sehingga        teks tidak terpotong dan tetap terbaca dengan jelas. Di dalamnya, AutoSizeText
+   - Widget pertama adalah RedTextWidget yang menggunakan plugin auto_size_text untuk membuat
+     teks otomatis menyesuaikan ukuran lebar kontainer kuning berukuran 50 piksel, sehingga
+     teks tidak terpotong dan tetap terbaca dengan jelas. Di dalamnya, AutoSizeText
      memungkinkan teks menyesuaikan ukuran font secara otomatis berdasarkan ruang yang
      tersedia.
    - Widget kedua adalah Text biasa, ditampilkan dalam kontainer hijau berukuran 100 piksel.
      Karena menggunakan Text standar tanpa auto_size_text, teks ini tidak menyesuaikan ukuran
      font secara otomatis dan dapat terpotong jika ruangnya terbatas.
-5. Jelaskan maksud dari tiap parameter yang ada di dalam plugin auto_size_text berdasarkan tautan pada dokumentasi ini !
+6. Jelaskan maksud dari tiap parameter yang ada di dalam plugin auto_size_text berdasarkan tautan pada dokumentasi ini !
 
    <img width="386" height="175" alt="image" src="https://github.com/user-attachments/assets/89785d06-f8dc-4927-8494-ff5a4fb9c4ea" />
 
