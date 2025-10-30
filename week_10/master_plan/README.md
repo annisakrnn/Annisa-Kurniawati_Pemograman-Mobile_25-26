@@ -160,9 +160,9 @@ Pada langkah ini dibuat widget _buildTaskTile yang berfungsi untuk menampilkan s
 
 5. Apa kegunaan method pada Langkah 11 dan 13 dalam lifecyle state ?
 
-   Pada langkah 11 digunakan method initState() yang berfungsi untuk melakukan inisialisasi awal sebelum widget ditampilkan, seperti membuat objek ScrollController dan menambahkan listener untuk menutup keyboard ketika pengguna melakukan scroll.
+Pada langkah 11 digunakan method initState() yang berfungsi untuk melakukan inisialisasi awal sebelum widget ditampilkan, seperti membuat objek ScrollController dan menambahkan listener untuk menutup keyboard ketika pengguna melakukan scroll.
 
-Sedangkan pada langkah 13 digunakan method dispose() yang berfungsi untuk membersihkan resource yang sudah tidak digunakan, yaitu dengan memanggil scrollController.dispose(). Hal ini dilakukan agar tidak terjadi kebocoran memori (memory leak) dan menjaga performa aplikasi tetap optimal.
+Sedangkan pada langkah 13 digunakan method dispose() yang berfungsi untuk membersihkan resource yang sudah tidak digunakan, yaitu dengan     memanggil scrollController.dispose(). Hal ini dilakukan agar tidak terjadi kebocoran memori (memory leak) dan menjaga performa aplikasi tetap optimal.
 
 6. Kumpulkan laporan praktikum Anda berupa link commit atau repository GitHub ke dosen yang telah disepakati !
 
