@@ -136,6 +136,37 @@ class _PlanScreenState extends State<PlanScreen> {
   }
 }
 ```
+Hasil:
+
+<img width="365" height="500" alt="image" src="https://github.com/user-attachments/assets/038f5bf2-2ce6-431b-94de-17c7222d6050" />
+
+**Tugas Praktikum 1: Dasar State dengan Model-View**
+
+1. Selesaikan langkah-langkah praktikum tersebut, lalu dokumentasikan berupa GIF hasil akhir praktikum beserta penjelasannya di file README.md! Jika Anda menemukan ada yang error atau tidak berjalan dengan baik, silakan diperbaiki.
+
+2. Jelaskan maksud dari langkah 4 pada praktikum tersebut! Mengapa dilakukan demikian?
+
+Langkah ini digunakan untuk menggabungkan beberapa file model ke dalam satu titik akses (satu “gateway”), agar file lain cukup melakukan satu kali import saja.
+
+3. Mengapa perlu variabel plan di langkah 6 pada praktikum tersebut? Mengapa dibuat konstanta ?
+
+Variabel plan dibuat agar aplikasi punya tempat menyimpan dan memperbarui data rencana (state), sedangkan const Plan() dipakai supaya data awal efisien, stabil, dan mendukung konsep immutable state di Flutter.
+
+4. Lakukan capture hasil dari Langkah 9 berupa GIF, kemudian jelaskan apa yang telah Anda buat!
+
+<img width="365" height="500" alt="image" src="https://github.com/user-attachments/assets/862df0d2-6a47-4544-b523-1b81681f9ce4" />
+
+Pada langkah ini dibuat widget _buildTaskTile yang berfungsi untuk menampilkan setiap elemen Task dalam bentuk ListTile yang berisi Checkbox dan TextField. Checkbox digunakan untuk menandai apakah tugas telah selesai, sedangkan TextField digunakan untuk mengedit deskripsi tugas. Setiap perubahan nilai pada Checkbox atau TextField akan memperbarui data plan.tasks melalui fungsi setState(), sehingga tampilan aplikasi berubah secara dinamis sesuai data terbaru.
+
+5. Apa kegunaan method pada Langkah 11 dan 13 dalam lifecyle state ?
+
+   Pada langkah 11 digunakan method initState() yang berfungsi untuk melakukan inisialisasi awal sebelum widget ditampilkan, seperti membuat objek ScrollController dan menambahkan listener untuk menutup keyboard ketika pengguna melakukan scroll.
+
+Sedangkan pada langkah 13 digunakan method dispose() yang berfungsi untuk membersihkan resource yang sudah tidak digunakan, yaitu dengan memanggil scrollController.dispose(). Hal ini dilakukan agar tidak terjadi kebocoran memori (memory leak) dan menjaga performa aplikasi tetap optimal.
+
+6. Kumpulkan laporan praktikum Anda berupa link commit atau repository GitHub ke dosen yang telah disepakati !
+
+
 
 
 
