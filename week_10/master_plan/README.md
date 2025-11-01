@@ -185,13 +185,89 @@ Hasil:
 
 Langkah 1: Buat file plan_provider.dart
 
+```import 'package:flutter/material.dart';
+import '../models/data_layer.dart';
+
+class PlanProvider extends InheritedNotifier<ValueNotifier<Plan>> {
+  const PlanProvider({
+    super.key,
+    required Widget child,
+    required ValueNotifier<Plan> notifier,
+  }) : super(child: child, notifier: notifier);
+
+  static ValueNotifier<Plan> of(BuildContext context) {
+    return context
+        .dependOnInheritedWidgetOfExactType<PlanProvider>()!
+        .notifier!;
+  }
+}
+```
+
 Langkah 2: Edit main.dart
 
+```import 'package:flutter/material.dart';
+// import 'package:mater_plan/provider/plan_provider.dart';
+import '../provider/plan_provider.dart';
+import '../models/data_layer.dart';
+import '../views/plan_screen.dart';
+
+void main() {
+  runApp(MasterPlanApp());
+}
+
+class MasterPlanApp extends StatelessWidget {
+  const MasterPlanApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: ThemeData(primarySwatch: Colors.purple),
+      home: PlanProvider(notifier: ValueNotifier<Plan>(const Plan()),
+      child: const PlanScreen(),
+      ),
+    );
+  }
+}
+```
+
 Langkah 3: Tambah method pada model plan.dart
+
+```
+import './task.dart';
+
+class Plan {
+  final String name;
+  final List<Task> tasks;
+
+  const Plan({this.name = '', this.tasks = const []});
+
+  int get completedCount => tasks
+  .where((task) => task.completed)
+  .length;
+  String get completenessMessage =>
+       '$completedCount out of ${tasks.length} tasks';
+}
+```
 
 Langkah 4: Pindah ke PlanScreen
 
 Langkah 5: Edit method _buildAddTaskButton
+
+```
+ Widget _buildAddTaskButton(BuildContext context) {
+    ValueNotifier<Plan> planNotifier = PlanProvider.of(context);
+    return FloatingActionButton(
+      child: const Icon(Icons.add),
+      onPressed: () {
+        Plan currentPlan = planNotifier.value;
+        planNotifier.value = Plan(
+          name: currentPlan.name,
+          tasks: List<Task>.from(currentPlan.tasks)..add(const Task()),
+        );
+      },
+    );
+  }
+```
 
 Langkah 6: Edit method _buildTaskTile
 
