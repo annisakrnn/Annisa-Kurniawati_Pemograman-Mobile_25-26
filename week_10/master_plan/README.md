@@ -345,7 +345,8 @@ Langkah 9: Tambah widget SafeArea
    
 6. Lakukan capture hasil dari Langkah 9 berupa GIF, kemudian jelaskan apa yang telah Anda buat!
 
-![gif praktikum2 js 10](https://github.com/user-attachments/assets/7e25e30b-a2ce-444b-9816-326aa556c4f6)
+<img src="https://github.com/user-attachments/assets/7e25e30b-a2ce-444b-9816-326aa556c4f6" width="360">
+
 
 Yang telah saya buat adalah tampilan tugas flutter dengan menambahkan kombinasi InheritedNotifier dan ValueNotifier untuk mengatur state dan memperbarui tampilan secara reaktif setiap kali data berubah.
 
