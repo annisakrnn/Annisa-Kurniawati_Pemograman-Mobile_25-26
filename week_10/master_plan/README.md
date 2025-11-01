@@ -159,13 +159,13 @@ Hasil:
 
 <img width="365" height="500" alt="image" src="https://github.com/user-attachments/assets/862df0d2-6a47-4544-b523-1b81681f9ce4" />
 
-    Pada langkah ini dibuat widget _buildTaskTile yang berfungsi untuk menampilkan
-    setiap elemen Task dalam bentuk ListTile yang berisi Checkbox dan TextField.
-    Checkbox digunakan untuk menandai apakah tugas telah selesai, sedangkan
-    TextField digunakan untuk mengedit deskripsi tugas. Setiap perubahan nilai pada
-    Checkbox atau TextField akan memperbarui data plan.tasks melalui fungsi
-    setState(), sehingga tampilan aplikasi berubah secara dinamis sesuai data
-    terbaru.
+  Pada langkah ini dibuat widget _buildTaskTile yang berfungsi untuk menampilkan
+  setiap elemen Task dalam bentuk ListTile yang berisi Checkbox dan TextField.
+  Checkbox digunakan untuk menandai apakah tugas telah selesai, sedangkan
+  TextField digunakan untuk mengedit deskripsi tugas. Setiap perubahan nilai pada
+  Checkbox atau TextField akan memperbarui data plan.tasks melalui fungsi
+  setState(), sehingga tampilan aplikasi berubah secara dinamis sesuai data
+  terbaru.
 
 5. Apa kegunaan method pada Langkah 11 dan 13 dalam lifecyle state ?
 
@@ -180,6 +180,81 @@ Hasil:
    (memory leak) dan menjaga performa aplikasi tetap optimal.
 
 7. Kumpulkan laporan praktikum Anda berupa link commit atau repository GitHub ke dosen yang telah disepakati !
+
+**Praktikum 2**
+
+Langkah 1: Buat file plan_provider.dart
+
+Langkah 2: Edit main.dart
+
+Langkah 3: Tambah method pada model plan.dart
+
+Langkah 4: Pindah ke PlanScreen
+
+Langkah 5: Edit method _buildAddTaskButton
+
+Langkah 6: Edit method _buildTaskTile
+
+Langkah 7: Edit _buildList
+
+Langkah 8: Tetap di class PlanScreen
+
+Langkah 9: Tambah widget SafeArea
+
+**Tugas Praktikum 2: InheritedWidget**
+
+1. Selesaikan langkah-langkah praktikum tersebut, lalu dokumentasikan berupa GIF hasil akhir praktikum beserta penjelasannya di file README.md! Jika Anda menemukan ada yang error atau tidak berjalan dengan baik, silakan diperbaiki sesuai dengan tujuan aplikasi tersebut dibuat.
+
+2. Jelaskan mana yang dimaksud InheritedWidget pada langkah 1 tersebut! Mengapa yang digunakan InheritedNotifier?
+
+3. Jelaskan maksud dari method di langkah 3 pada praktikum tersebut! Mengapa dilakukan demikian?
+
+4. Lakukan capture hasil dari Langkah 9 berupa GIF, kemudian jelaskan apa yang telah Anda buat!
+
+5. Kumpulkan laporan praktikum Anda berupa link commit atau repository GitHub ke dosen yang telah disepakati !
+
+**Praktikum 3**
+
+Langkah 1: Edit PlanProvider
+
+Langkah 2: Edit main.dart
+
+Langkah 3: Edit plan_screen.dart
+
+Langkah 4: Error
+
+Langkah 5: Tambah getter Plan
+
+Langkah 6: Method initState()
+
+Langkah 7: Widget build
+
+Langkah 8: Edit _buildTaskTile
+
+Langkah 9: Buat screen baru
+
+Langkah 10: Pindah ke class _PlanCreatorScreenState
+
+Langkah 11: Pindah ke method build
+
+Langkah 12: Buat widget _buildListCreator
+
+Langkah 13: Buat void addPlan()
+
+Langkah 14: Buat widget _buildMasterPlans()
+
+**Tugas Praktikum 3: State di Multiple Screens**
+
+1. Selesaikan langkah-langkah praktikum tersebut, lalu dokumentasikan berupa GIF hasil akhir praktikum beserta penjelasannya di file README.md! Jika Anda menemukan ada yang error atau tidak berjalan dengan baik, silakan diperbaiki sesuai dengan tujuan aplikasi tersebut dibuat.
+
+2. Berdasarkan Praktikum 3 yang telah Anda lakukan, jelaskan maksud dari gambar diagram berikut ini!
+
+   <img width="268" height="142" alt="image" src="https://github.com/user-attachments/assets/ffc47e49-eb9d-4fad-adf8-31411219e610" />
+
+3. Lakukan capture hasil dari Langkah 14 berupa GIF, kemudian jelaskan apa yang telah Anda buat!
+
+4. Kumpulkan laporan praktikum Anda berupa link commit atau repository GitHub ke dosen yang telah disepakati !
+
 
 
 
