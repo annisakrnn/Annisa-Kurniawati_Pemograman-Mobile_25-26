@@ -271,11 +271,65 @@ Langkah 5: Edit method _buildAddTaskButton
 
 Langkah 6: Edit method _buildTaskTile
 
+```
+ Widget _buildTaskTile(Task task, int index, BuildContext context) {
+    ValueNotifier<Plan> planNotifier = PlanProvider.of(context);
+    return ListTile(
+      leading: Checkbox(
+        value: task.completed,
+        onChanged: (selected) {
+          Plan currentPlan = planNotifier.value;
+          planNotifier.value = Plan(
+            name: currentPlan.name,
+            tasks: List<Task>.from(currentPlan.tasks)
+            ..[index] = Task(
+              description: task.description,
+              completed: selected ?? false,
+            ),
+          );
+        }),
+```
+
 Langkah 7: Edit _buildList
+
+```
+Widget _buildList(Plan plan) {
+    return ListView.builder(
+      controller: scrollController,
+      // keyboardDismissBehavior: Theme.of(context).platform == TargetPlatform.iOS
+      //     ? ScrollViewKeyboardDismissBehavior.onDrag
+      //     : ScrollViewKeyboardDismissBehavior.manual,
+      itemCount: plan.tasks.length,
+      itemBuilder: (context, index) => _buildTaskTile(plan.tasks[index], index, context),
+    );
+  }
+```
 
 Langkah 8: Tetap di class PlanScreen
 
 Langkah 9: Tambah widget SafeArea
+
+```
+@override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      //ganti 'Namaku' dengan nama panggilan anda
+      appBar: AppBar(title: const Text('Master Plan Annisa')),
+      body: ValueListenableBuilder<Plan>(
+        valueListenable: PlanProvider.of(context),
+        builder: (context, plan, child) {
+          return Column(
+          children: [
+            Expanded(child: _buildList(plan)),
+            SafeArea(child: Text(plan.completenessMessage))
+          ],
+      );
+        },
+      ),
+      floatingActionButton: _buildAddTaskButton(context),
+      );
+    }
+```
 
 **Tugas Praktikum 2: InheritedWidget**
 
@@ -283,11 +337,19 @@ Langkah 9: Tambah widget SafeArea
 
 2. Jelaskan mana yang dimaksud InheritedWidget pada langkah 1 tersebut! Mengapa yang digunakan InheritedNotifier?
 
-3. Jelaskan maksud dari method di langkah 3 pada praktikum tersebut! Mengapa dilakukan demikian?
+    Yang termasuk adalah code bagian InheritedNotifier, yang memungkinkan data (Plan) diwariskan ke seluruh widget anak melalui konteks. alasanya karena widget ini terhubung dengan ValueNotifier<Plan>, sehingga dapat mendengarkan perubahan nilai Plan dan otomatis memperbarui UI tanpa memanggil setState() secara manual.
+   
+4. Jelaskan maksud dari method di langkah 3 pada praktikum tersebut! Mengapa dilakukan demikian?
 
-4. Lakukan capture hasil dari Langkah 9 berupa GIF, kemudian jelaskan apa yang telah Anda buat!
+    Getter completedCount dan completenessMessage dibuat agar objek Plan dapat secara otomatis menghitung dan melaporkan kemajuan (progress) tugas-tugasnya tanpa perlu penyimpanan tambahan atau perhitungan manual, sehingga data tetap konsisten dan mudah digunakan di tampilan aplikasi.
+   
+6. Lakukan capture hasil dari Langkah 9 berupa GIF, kemudian jelaskan apa yang telah Anda buat!
 
-5. Kumpulkan laporan praktikum Anda berupa link commit atau repository GitHub ke dosen yang telah disepakati !
+![gif praktikum2 js 10](https://github.com/user-attachments/assets/7e25e30b-a2ce-444b-9816-326aa556c4f6)
+
+Yang telah saya buat adalah tampilan tugas flutter dengan menambahkan kombinasi InheritedNotifier dan ValueNotifier untuk mengatur state dan memperbarui tampilan secara reaktif setiap kali data berubah.
+
+7. Kumpulkan laporan praktikum Anda berupa link commit atau repository GitHub ke dosen yang telah disepakati !
 
 **Praktikum 3**
 
