@@ -159,13 +159,13 @@ Hasil:
 
 <img width="365" height="500" alt="image" src="https://github.com/user-attachments/assets/862df0d2-6a47-4544-b523-1b81681f9ce4" />
 
-  Pada langkah ini dibuat widget _buildTaskTile yang berfungsi untuk menampilkan
-  setiap elemen Task dalam bentuk ListTile yang berisi Checkbox dan TextField.
-  Checkbox digunakan untuk menandai apakah tugas telah selesai, sedangkan
-  TextField digunakan untuk mengedit deskripsi tugas. Setiap perubahan nilai pada
-  Checkbox atau TextField akan memperbarui data plan.tasks melalui fungsi
-  setState(), sehingga tampilan aplikasi berubah secara dinamis sesuai data
-  terbaru.
+    Pada langkah ini dibuat widget _buildTaskTile yang berfungsi untuk menampilkan
+    setiap elemen Task dalam bentuk ListTile yang berisi Checkbox dan TextField.
+    Checkbox digunakan untuk menandai apakah tugas telah selesai, sedangkan
+    TextField digunakan untuk mengedit deskripsi tugas. Setiap perubahan nilai pada
+    Checkbox atau TextField akan memperbarui data plan.tasks melalui fungsi
+    setState(), sehingga tampilan aplikasi berubah secara dinamis sesuai data
+    terbaru.
 
 5. Apa kegunaan method pada Langkah 11 dan 13 dalam lifecyle state ?
 
