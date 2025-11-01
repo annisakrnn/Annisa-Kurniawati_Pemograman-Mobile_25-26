@@ -361,17 +361,145 @@ Langkah 9: Tambah widget SafeArea
 
 Langkah 1: Edit PlanProvider
 
+```
+import 'package:flutter/material.dart';
+
+import '../models/data_layer.dart';
+
+class PlanProvider extends InheritedNotifier<ValueNotifier<List<Plan>>> {
+  const PlanProvider({
+    super.key,
+    required Widget child,
+    required ValueNotifier<List<Plan>> notifier,
+  }) : super(child: child, notifier: notifier);
+
+  static ValueNotifier<List<Plan>> of(BuildContext context) {
+    return context
+        .dependOnInheritedWidgetOfExactType<PlanProvider>()!
+        .notifier!;
+  }
+}
+```
+
 Langkah 2: Edit main.dart
 
+```
+import 'package:flutter/material.dart';
+
+import '../models/data_layer.dart';
+import '../provider/plan_provider.dart';
+import '../views/plan_creator_screen.dart';
+
+void main() => runApp(const MasterPlanApp());
+
+class MasterPlanApp extends StatelessWidget {
+  const MasterPlanApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return PlanProvider(
+      notifier: ValueNotifier<List<Plan>>([]),
+      child: MaterialApp(
+        title: 'State management app',
+        theme: ThemeData(primarySwatch: Colors.pink),
+        home: const PlanCreatorScreen(),
+        debugShowCheckedModeBanner: false,
+      ),
+    );
+  }
+}
+```
+
 Langkah 3: Edit plan_screen.dart
+
+```
+class PlanScreen extends StatefulWidget {
+  final Plan plan;
+  const PlanScreen({super.key, required this.plan});
+```
 
 Langkah 4: Error
 
 Langkah 5: Tambah getter Plan
 
+```
+class _PlanScreenState extends State<PlanScreen> {
+  late final ScrollController scrollController;
+
+  Plan get plan => widget.plan;
+```
+
 Langkah 6: Method initState()
 
+```
+ @override
+  void initState() {
+    super.initState();
+    scrollController = ScrollController()
+      ..addListener(() {
+        FocusScope.of(context).requestFocus(FocusNode());
+      });
+  }
+```
+
 Langkah 7: Widget build
+
+```
+ @override
+  Widget build(BuildContext context) {
+    final ValueNotifier<List<Plan>> plansNotifier = PlanProvider.of(context);
+
+    return Scaffold(
+      appBar: AppBar(title: Text(plan.name)),
+      body: ValueListenableBuilder<List<Plan>>(
+        valueListenable: PlanProvider.of(context),
+        builder: (context, plans, child) {
+          // mencari plan aktif
+          Plan currentPlan = plans.firstWhere((p) => p.name == plan.name);
+
+          return Column(
+            children: [
+              Expanded(child: _buildList(currentPlan, plansNotifier)),
+              SafeArea(child: Text(currentPlan.completenessMessage)),
+            ],
+          );
+        },
+      ),
+      floatingActionButton: _buildAddTaskButton(plansNotifier),
+    );
+  }
+
+  Widget _buildAddTaskButton(ValueNotifier<List<Plan>> planNotifier) {
+    return FloatingActionButton(
+      child: const Icon(Icons.add),
+      onPressed: () {
+        Plan currentPlan = plan;
+        int planIndex = planNotifier.value.indexWhere(
+          (p) => p.name == currentPlan.name,
+        );
+
+        // menambahkan task baru
+        List<Task> updatedTasks = List<Task>.from(currentPlan.tasks)
+          ..add(const Task());
+
+        // mengupdate list plan
+        planNotifier.value = List<Plan>.from(planNotifier.value)
+          ..[planIndex] = Plan(name: currentPlan.name, tasks: updatedTasks);
+
+        final updatePlan = Plan(name: currentPlan.name, tasks: updatedTasks);
+      },
+    );
+  }
+
+  Widget _buildList(Plan plan, ValueNotifier<List<Plan>> planNotifier) {
+    return ListView.builder(
+      controller: scrollController,
+      itemCount: plan.tasks.length,
+      itemBuilder: (context, index) =>
+          _buildTaskTile(plan, plan.tasks[index], index, planNotifier),
+    );
+  }
+```
 
 Langkah 8: Edit _buildTaskTile
 
