@@ -337,18 +337,23 @@ Langkah 9: Tambah widget SafeArea
 
 2. Jelaskan mana yang dimaksud InheritedWidget pada langkah 1 tersebut! Mengapa yang digunakan InheritedNotifier?
 
-    Yang termasuk adalah code bagian InheritedNotifier, yang memungkinkan data (Plan) diwariskan ke seluruh widget anak melalui konteks. alasanya karena widget ini terhubung dengan ValueNotifier<Plan>, sehingga dapat mendengarkan perubahan nilai Plan dan otomatis memperbarui UI tanpa memanggil setState() secara manual.
+   Yang termasuk adalah code bagian InheritedNotifier, yang memungkinkan data (Plan) diwariskan ke
+   seluruh widget anak melalui konteks. alasanya karena widget ini terhubung dengan
+   ValueNotifier<Plan>, sehingga dapat mendengarkan perubahan nilai Plan dan otomatis memperbarui
+   UI tanpa memanggil setState() secara manual.
    
 4. Jelaskan maksud dari method di langkah 3 pada praktikum tersebut! Mengapa dilakukan demikian?
 
-    Getter completedCount dan completenessMessage dibuat agar objek Plan dapat secara otomatis menghitung dan melaporkan kemajuan (progress) tugas-tugasnya tanpa perlu penyimpanan tambahan atau perhitungan manual, sehingga data tetap konsisten dan mudah digunakan di tampilan aplikasi.
+   Getter completedCount dan completenessMessage dibuat agar objek Plan dapat secara otomatis
+   menghitung dan melaporkan kemajuan (progress) tugas-tugasnya tanpa perlu penyimpanan tambahan
+   atau perhitungan manual, sehingga data tetap konsisten dan mudah digunakan di tampilan aplikasi.
    
 6. Lakukan capture hasil dari Langkah 9 berupa GIF, kemudian jelaskan apa yang telah Anda buat!
 
-<img src="https://github.com/user-attachments/assets/7e25e30b-a2ce-444b-9816-326aa556c4f6" width="150">
+<img src="https://github.com/user-attachments/assets/7e25e30b-a2ce-444b-9816-326aa556c4f6" width="200">
 
-
-Yang telah saya buat adalah tampilan tugas flutter dengan menambahkan kombinasi InheritedNotifier dan ValueNotifier untuk mengatur state dan memperbarui tampilan secara reaktif setiap kali data berubah.
+  Yang telah saya buat adalah tampilan tugas flutter dengan menambahkan kombinasi InheritedNotifier   dan ValueNotifier untuk mengatur state dan memperbarui tampilan secara reaktif setiap kali data  
+  berubah.
 
 7. Kumpulkan laporan praktikum Anda berupa link commit atau repository GitHub ke dosen yang telah disepakati !
 
