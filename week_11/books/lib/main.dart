@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:async/async.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
@@ -44,17 +45,19 @@ class _FuturePageState extends State<FuturePage> {
             ElevatedButton(
               child: const Text('GO!'),
               onPressed: () {
+                //langlah 2 praktikum 4
+                returnFG();
                 //Langkah 3 Praktikum 3
-                getNumber()
-                    .then((value) {
-                      setState(() {
-                        result = value.toString();
-                      });
-                      //langkah 6 praktikum 3
-                    })
-                    .catchError((e) {
-                      result = 'An error occurred';
-                    });
+                // getNumber()
+                //     .then((value) {
+                //       setState(() {
+                //         result = value.toString();
+                //       });
+                //       //langkah 6 praktikum 3
+                //     })
+                //     .catchError((e) {
+                //       result = 'An error occurred';
+                //     });
                 //Langkah 5 Praktikum 1
                 //   setState(() {});
                 //   getData()
@@ -101,6 +104,23 @@ class _FuturePageState extends State<FuturePage> {
     //langkah 2 praktikum 3
     // await Future.delayed(const Duration(seconds: 5));
     // completer.complete(42);
+  }
+
+  void returnFG() {
+    FutureGroup<int> futureGroup = FutureGroup<int>();
+    futureGroup.add(returnOneAsync());
+    futureGroup.add(returnTwoAsync());
+    futureGroup.add(returnThreeAsync());
+    futureGroup.close();
+    futureGroup.future.then((List<int> value) {
+      int total = 0;
+      for (var element in value) {
+        total += element;
+      }
+      setState(() {
+        result = total.toString();
+      });
+    });
   }
 
   Future<Response> getData() async {
