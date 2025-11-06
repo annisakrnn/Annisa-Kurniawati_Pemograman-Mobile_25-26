@@ -503,17 +503,172 @@ Langkah 7: Widget build
 
 Langkah 8: Edit _buildTaskTile
 
+```
+ Widget _buildTaskTile(
+    Task task,
+    int index,
+    ValueNotifier<List<Plan>> planNotifier,
+  ) {
+    return ListTile(
+      leading: Checkbox(
+        value: task.completed,
+        onChanged: (selected) {
+          int planIndex = planNotifier.value.indexWhere(
+            (p) => p.name == plan.name,
+          );
+
+          planNotifier.value = List<Plan>.from(planNotifier.value)
+            ..[planIndex] = Plan(
+              name: plan.name,
+              tasks: List<Task>.from(plan.tasks)
+                ..[index] = Task(
+                  description: task.description,
+                  completed: selected ?? false,
+                ),
+            );
+        },
+      ),
+      title: TextFormField(
+        initialValue: task.description,
+        onChanged: (text) {
+          int planIndex = planNotifier.value.indexWhere(
+            (p) => p.name == plan.name,
+          );
+
+          planNotifier.value.indexWhere((p) => p.name == plan.name);
+          planNotifier.value = List<Plan>.from(planNotifier.value)
+            ..[planIndex] = Plan(
+              name: plan.name,
+              tasks: List<Task>.from(plan.tasks)
+                ..[index] = Task(description: text, completed: task.completed),
+            );
+        },
+      ),
+    );
+  }
+}
+```
+
 Langkah 9: Buat screen baru
+
+```
+home: const PlanCreatorScreen(),
+```
 
 Langkah 10: Pindah ke class _PlanCreatorScreenState
 
+```
+class _PlanCreatorScreenState extends State<PlanCreatorScreen> {
+  final textController = TextEditingController();
+
+  @override
+  void dispose() {
+    textController.dispose();
+    super.dispose();
+  }
+```
+
 Langkah 11: Pindah ke method build
+
+```
+ @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Master Plan Annisa Kurniawati'),
+        backgroundColor: Colors.pink,
+        foregroundColor: Colors.white,
+      ),
+      body: Column(
+        children: [
+          _buildListCreator(),
+          Expanded(child: _buildMasterPlans()),
+        ],
+      ),
+    );
+  }
+```
 
 Langkah 12: Buat widget _buildListCreator
 
+```
+ Widget _buildListCreator() {
+    return Padding(
+      padding: const EdgeInsets.all(20.0),
+      child: Material(
+        color: Theme.of(context).cardColor,
+        elevation: 10,
+        child: TextField(
+          controller: textController,
+          decoration: const InputDecoration(
+            labelText: 'Add a plan',
+            contentPadding: EdgeInsets.all(20),
+          ),
+          onEditingComplete: addPlan,
+        ),
+      ),
+    );
+  }
+```
+
 Langkah 13: Buat void addPlan()
 
+```
+void addPlan() {
+    final text = textController.text;
+    if (text.isEmpty) return;
+
+    final plan = Plan(name: text, tasks: []);
+    ValueNotifier<List<Plan>> planNotifier = PlanProvider.of(context);
+
+    planNotifier.value = List<Plan>.from(planNotifier.value)..add(plan);
+    textController.clear();
+    FocusScope.of(context).requestFocus(FocusNode());
+    setState(() {});
+  }
+```
+
 Langkah 14: Buat widget _buildMasterPlans()
+
+```
+Widget _buildMasterPlans() {
+    ValueNotifier<List<Plan>> planNotifier = PlanProvider.of(context);
+
+    return ValueListenableBuilder<List<Plan>>(
+      valueListenable: planNotifier,
+      builder: (context, plans, _) {
+        if (plans.isEmpty) {
+          return const Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.note, size: 100, color: Colors.grey),
+                Text('Anda belum memiliki rencana apapun.'),
+              ],
+            ),
+          );
+        }
+
+        return ListView.builder(
+          itemCount: plans.length,
+          itemBuilder: (context, index) {
+            final plan = plans[index];
+            return ListTile(
+              title: Text(plan.name),
+              subtitle: Text(plan.completenessMessage),
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (_) => PlanScreen(plan: plan)),
+                );
+              },
+            );
+          },
+        );
+      },
+    );
+  }
+}
+```
 
 **Tugas Praktikum 3: State di Multiple Screens**
 
@@ -523,9 +678,16 @@ Langkah 14: Buat widget _buildMasterPlans()
 
    <img width="268" height="142" alt="image" src="https://github.com/user-attachments/assets/ffc47e49-eb9d-4fad-adf8-31411219e610" />
 
-3. Lakukan capture hasil dari Langkah 14 berupa GIF, kemudian jelaskan apa yang telah Anda buat!
+    Diagram tersebut menjelaskan perubahan hierarki widget dalam aplikasi Flutter setelah terjadi navigasi push yaitu perpindahan dari halaman pembuat rencana (PlanCreatorScreen) ke halaman utama rencana (PlanScreen).
+   
+4. Lakukan capture hasil dari Langkah 14 berupa GIF, kemudian jelaskan apa yang telah Anda buat!
 
-4. Kumpulkan laporan praktikum Anda berupa link commit atau repository GitHub ke dosen yang telah disepakati !
+  <img src="https://github.com/user-attachments/assets/6730823e-cb34-4630-b006-da6deeb8ad4b" width="200" alt="gif praktikum 3 js 10">
+
+    Yang telah saya buat adalah tampilan tugas flutter dengan menambahkan kombinasi InheritedWidget  dan ValueNotifier untuk mengatur state dan
+    memperbarui tampilan secara reaktif setiap kali data berubah. Tujuannya adalah untuk mengelola daftar rencana dan daftar tugas di dalamnya
+    secara reaktif.
+5. Kumpulkan laporan praktikum Anda berupa link commit atau repository GitHub ke dosen yang telah disepakati !
 
 
 
