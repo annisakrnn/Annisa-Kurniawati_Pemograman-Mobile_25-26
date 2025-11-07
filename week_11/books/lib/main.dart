@@ -44,8 +44,23 @@ class _FuturePageState extends State<FuturePage> {
             ElevatedButton(
               child: const Text('GO!'),
               onPressed: () {
-                //langlah 2 praktikum 4
-                returnFG();
+                //soal 10 praktikum 5
+                handleError();
+                //langkah 2 praktikum 5
+                // returnError()
+                //     .then((value) {
+                //       setState(() {
+                //         result = 'Success!';
+                //       });
+                //     })
+                //     .catchError((onError) {
+                //       setState(() {
+                //         result = onError.toString();
+                //       });
+                //     })
+                //     .whenComplete(() => print('Complete'));
+                //langkah 2 praktikum 4
+                // returnFG();
                 //Langkah 3 Praktikum 3
                 // getNumber()
                 //     .then((value) {
@@ -127,6 +142,23 @@ class _FuturePageState extends State<FuturePage> {
       returnTwoAsync(),
       returnThreeAsync(),
     ]);
+  }
+
+  Future returnError() async {
+    await Future.delayed(const Duration(seconds: 2));
+    throw Exception('Something terrible happened!');
+  }
+
+  Future handleError() async {
+    try {
+      await returnError();
+    } catch (error) {
+      setState(() {
+        result = error.toString();
+      });
+    } finally {
+      print('Complete');
+    }
   }
 
   Future<Response> getData() async {
