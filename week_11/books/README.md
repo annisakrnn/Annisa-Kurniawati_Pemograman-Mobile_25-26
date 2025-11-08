@@ -431,37 +431,120 @@ home: LocationScreen(),
 
 Langkah 7: Run
 
+<img width="161" height="289" alt="image" src="https://github.com/user-attachments/assets/e557330b-bb04-473f-b800-c119511762d7" />
+
 Langkah 8: Tambahkan animasi loading
+
+```
+@override
+  Widget build(BuildContext context) {
+    final myWidget = myPosition == ''
+        ? const CircularProgressIndicator()
+        : Text(myPosition);
+    ;
+    return Scaffold(
+      appBar: AppBar(title: const Text('Current Location Annisa')),
+      body: Center(child: myWidget),
+    );
+  }
+```
 
 Soal 12:
 
 - Jika Anda tidak melihat animasi loading tampil, kemungkinan itu berjalan sangat cepat. Tambahkan delay pada method getPosition() dengan kode await Future.delayed(const Duration(seconds: 3));
 
+  ```
+  await Future.delayed(const Duration(seconds: 3));
+  ```
+  
 - Apakah Anda mendapatkan koordinat GPS ketika run di browser? Mengapa demikian?
 
+  Seharusnya tidak, namun dikarenakan browser saya memberikan izin dan perangkat mendukung API lokasi maka lokasi akan muncul
+
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 12".
+
+<img src="https://github.com/user-attachments/assets/82d53636-8adb-42c0-a313-53635dbbbb36" width="150">
 
 **Praktikum 7**
 
 Langkah 1: Modifikasi method getPosition()
 
+```
+Future<Position> getPosition() async {
+    await Geolocator.requestPermission();
+    await Geolocator.isLocationServiceEnabled();
+    await Future.delayed(const Duration(seconds: 3));
+    Position positon = await Geolocator.getCurrentPosition();
+    return positon;
+```
+
 Langkah 2: Tambah variabel
+
+```
+Future<Position>? position;
+```
 
 Langkah 3: Tambah initState()
 
+```
+ @override
+  void initState() {
+    super.initState();
+    position = getPosition();
+```
+
 Langkah 4: Edit method build()
+
+```
+@override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Current Location Annisa')),
+      body: Center(
+        child: FutureBuilder(
+          future: position,
+          builder: (BuildContext context, AsyncSnapshot<Position> snapshot) {
+            if (snapshot.connectionState == ConnectionState.waiting) {
+              return const CircularProgressIndicator();
+            } else if (snapshot.connectionState == ConnectionState.done) {
+              return Text(snapshot.data.toString());
+            } else {
+              return const Text('');
+            }
+          },
+        ),
+      ),
+    );
+  }
+```
 
 Soal 13:
 
 - Apakah ada perbedaan UI dengan praktikum sebelumnya? Mengapa demikian?
 
+  Pada tampilan UI tidak ada perubahan, namun ada perubahan pada code nya. praktikum sebelumnya menggunakan setState() dan variabel myPosition untuk memperbarui UI secara manual sedangkan praktikum sekarang menggunakan FutureBuilder untuk membangun UI otomatis berdasarkan status Future (yakni position).
+
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 13".
+
+  <img src="https://github.com/user-attachments/assets/82d53636-8adb-42c0-a313-53635dbbbb36" width="150">
 
 - Seperti yang Anda lihat, menggunakan FutureBuilder lebih efisien, clean, dan reactive dengan Future bersama UI.
 
 Langkah 5: Tambah handling error
 
+```
+else if (snapshot.connectionState == ConnectionState.done) {
+              if (snapshot.hasError) {
+                return Text('Something terrible happened');
+              }
+              return Text(snapshot.data.toString());
+```
+
 Soal 14: Apakah ada perbedaan UI dengan langkah sebelumnya? Mengapa demikian? dan hasil GIF!
+
+Dalam segi UI tidak ada perubahan namun pada kondisi pertama sebelum ditambahkan hasError UI hanya menampilkan dua kondisi: loading (CircularProgressIndicator) dan hasil (Text(snapshot.data)) dan setelah ditambahkan hasError UI kini bisa menampilkan tiga kondisi: loading, hasil, dan pesan error ("Something terrible happened!").
+
+<img src="https://github.com/user-attachments/assets/82d53636-8adb-42c0-a313-53635dbbbb36" width="150">
 
 **Praktikum 8**
 
@@ -469,15 +552,116 @@ Langkah 1: Buat file baru navigation_first.dart
 
 Langkah 2: Isi kode navigation_first.dart
 
+```
+import 'package:flutter/material.dart';
+
+class NavigationFirst extends StatefulWidget {
+  const NavigationFirst({super.key});
+
+  @override
+  State<NavigationFirst> createState() => _NavigationFirstState();
+}
+
+class _NavigationFirstState extends State<NavigationFirst> {
+  Color color = Colors.blue.shade700;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: color,
+      appBar: AppBar(title: const Text('Navigation First Annisa')),
+      body: Center(
+        child: ElevatedButton(
+          child: const Text('Change Color'),
+          onPressed: () {
+            _navigateAndGetColor(context);
+          },
+        ),
+      ),
+    );
+  }
+```
+
 Soal 15: Tambahkan nama panggilan Anda pada tiap properti title sebagai identitas pekerjaan Anda dan Silakan ganti dengan warna tema favorit Anda.
 
+```
+appBar: AppBar(title: const Text('Navigation First Annisa')),
+Color color = Colors.blue.shade700;
+```
+
 Langkah 3: Tambah method di class _NavigationFirstState
+
+```
+Future _navigateAndGetColor(BuildContext context) async {
+    color =
+        await Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const NavigationSecond()),
+        ) ??
+        Colors.blue;
+    setState(() {});
+    ;
+  }
+```
 
 Langkah 4: Buat file baru navigation_second.dart
 
 Langkah 5: Buat class NavigationSecond dengan StatefulWidget
 
+```
+import 'package:flutter/material.dart';
+
+class NavigationSecond extends StatefulWidget {
+  const NavigationSecond({super.key});
+
+  @override
+  State<NavigationSecond> createState() => _NavigationSecondState();
+}
+
+class _NavigationSecondState extends State<NavigationSecond> {
+  @override
+  Widget build(BuildContext context) {
+    Color color;
+    return Scaffold(
+      appBar: AppBar(title: const Text('Navigation Second Annisa')),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            ElevatedButton(
+              child: const Text('Red'),
+              onPressed: () {
+                color = Colors.red.shade700;
+                Navigator.pop(context, color);
+              },
+            ),
+            ElevatedButton(
+              child: const Text('Green'),
+              onPressed: () {
+                color = Colors.green.shade700;
+                Navigator.pop(context, color);
+              },
+            ),
+            ElevatedButton(
+              child: const Text('Blue'),
+              onPressed: () {
+                color = Colors.blue.shade700;
+                Navigator.pop(context, color);
+              },
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+```
+
 Langkah 6: Edit main.dart
+
+```
+home: NavigationFirst(),
+```
 
 Langkah 8: Run
 
