@@ -665,13 +665,49 @@ home: NavigationFirst(),
 
 Langkah 8: Run
 
+<img src="https://github.com/user-attachments/assets/68bd06d3-fc0c-43d9-a374-abf4fdd1dcb4" width="150">
+
 Soal 16: 
 
 - Cobalah klik setiap button, apa yang terjadi ? Mengapa demikian ?
 
+  Jika di klik untuk setiap button maka warna background akan berganti sesuai nama pada button. ini dikarenakan oleh mekanisme navigator dengan pengembalian nilai (return value) digunakan. Pada halaman pertama (NavigationFirst), ketika tombol “Change Color” ditekan, fungsi berikut dijalankan: **_navigateAndGetColor(context);**
+yang memanggil halaman kedua dengan **color = await Navigator.push(
+  context,
+  MaterialPageRoute(builder: (context) => const NavigationSecond()),
+) ?? Colors.blue;** artinya halaman pertama menunggu nilai warna (color) dikembalikan dari halaman kedua. Pada halaman kedua (NavigationSecond), setiap tombol memiliki perintah **Navigator.pop(context, color);** yang artinya menutup halaman kedua dan mengirimkan nilai warna kembali ke halaman pertama, Lalu setelah kembali pada halaman pertama, nilai warna diterima dan disimpan ke variabel color.
+Lalu setState(() {}) dipanggil agar UI di-refresh dengan warna baru.
+
 - Gantilah 3 warna pada langkah 5 dengan warna favorit Anda!
 
+  ```
+  children: [
+            ElevatedButton(
+              child: const Text('Pink'),
+              onPressed: () {
+                color = Colors.pink.shade600;
+                Navigator.pop(context, color);
+              },
+            ),
+            ElevatedButton(
+              child: const Text('Brown'),
+              onPressed: () {
+                color = Colors.brown.shade300;
+                Navigator.pop(context, color);
+              },
+            ),
+            ElevatedButton(
+              child: const Text('Blue'),
+              onPressed: () {
+                color = Colors.blue.shade300;
+                Navigator.pop(context, color);
+              },
+            ),
+  ```
+
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 16".
+
+<img src="https://github.com/user-attachments/assets/aa548d44-1b0f-4f28-9b41-32a3d4dd4fed" width="150">
 
 **Praktikum 9**
 
@@ -679,21 +715,128 @@ Langkah 1: Buat file baru navigation_dialog.dart
 
 Langkah 2: Isi kode navigation_dialog.dart
 
+```
+import 'package:flutter/material.dart';
+
+class NavigationDialogScreen extends StatefulWidget {
+  const NavigationDialogScreen({super.key});
+
+  @override
+  State<NavigationDialogScreen> createState() => _NavigationDialogScreenState();
+}
+
+class _NavigationDialogScreenState extends State<NavigationDialogScreen> {
+  Color color = Colors.blue.shade700;
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: color,
+      appBar: AppBar(title: const Text('Navigation Dialog Screen')),
+      body: Center(
+        child: ElevatedButton(
+          child: const Text('Change Color'),
+          onPressed: () {},
+        ),
+      ),
+    );
+  }
+}
+```
+
 Langkah 3: Tambah method async
+
+```
+_showColorDialog(BuildContext context) async {
+    Color color;
+    await showDialog(
+      barrierDismissible: false,
+      context: context,
+      builder: (_) {
+        return AlertDialog(
+          title: const Text('very important question'),
+          content: const Text('Please choose a color'),
+          actions: <Widget>[
+            TextButton(
+              child: const Text('Red'),
+              onPressed: () {
+                color = Colors.red.shade700;
+                Navigator.pop(context, color);
+              },
+            ),
+            TextButton(
+              child: const Text('Green'),
+              onPressed: () {
+                color = Colors.green.shade700;
+                Navigator.pop(context, color);
+              },
+            ),
+            TextButton(
+              child: const Text('Green'),
+              onPressed: () {
+                color = Colors.blue.shade700;
+                Navigator.pop(context, color);
+              },
+            ),
+          ],
+        );
+      },
+    );
+    setState(() {});
+  }
+}
+```
 
 Langkah 4: Panggil method di ElevatedButton
 
+```
+onPressed: () {
+            _showColorDialog(context);
+          },
+```
+
 Langkah 5: Edit main.dart
 
+```
+home: const NavigationDialogScreen(),
+```
+
 Langkah 6: Run
+
+<img width="368" height="502" alt="image" src="https://github.com/user-attachments/assets/4dbded90-3fd4-43d6-9bc9-c9b1670164f1" />
 
 Soal 17:
 
 - Cobalah klik setiap button, apa yang terjadi ? Mengapa demikian ?
 
+  Yang terjadi adalah warna background berganti sesuai nama pada button dan yang sudah kita set pada code, karena Navigator.pop(context, value) mengembalikan value (dalam hal ini warna) ke halaman pemanggil.await showDialog() menunggu hingga dialog ditutup dan menerima nilai value itu. setState() memperbarui UI agar menampilkan perubahan.
+
 - Gantilah 3 warna pada langkah 3 dengan warna favorit Anda!
 
+  ```
+  TextButton(
+              child: const Text('Pink'),
+              onPressed: () {
+                Navigator.pop(context, Colors.pink.shade700);
+              },
+            ),
+            TextButton(
+              child: const Text('DeepOrange'),
+              onPressed: () {
+                Navigator.pop(context, Colors.deepOrange.shade700);
+              },
+            ),
+            TextButton(
+              child: const Text('Blue'),
+              onPressed: () {
+                Navigator.pop(context, Colors.lightBlueAccent.shade700);
+              },
+  ```
+
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 17".
+
+  <img src="https://github.com/user-attachments/assets/b101cbc4-1c48-49da-a302-99901f03e071" width="150">
+
+
 
 
 
