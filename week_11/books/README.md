@@ -280,40 +280,154 @@ Soal 7: Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu la
 
 <img src="https://github.com/user-attachments/assets/5cd4637d-eefd-4541-aa72-cee68d2cdc49" width="150">
 
-
 Langkah 4: Ganti variabel futureGroup
 
+```
+ final futures = Future.wait<int>([
+      returnOneAsync(),
+      returnTwoAsync(),
+      returnThreeAsync(),
+    ]);
+```
+
 Soal 8: Jelaskan maksud perbedaan kode langkah 1 dan 4!
+
+Perbedaanya jika FutureGroup digunakan saat jumlah Future tidak tetap atau ingin menambah Future secara bertahap sebelum menutup grup dan jika Future.wait() digunakan saat daftar Future sudah diketahui dari awal dan ingin menunggu hasil semuanya sekaligus.
 
 **Praktikum 5**
 
 Langkah 1: Buka file main.dart
 
+```
+Future returnError() async {
+    await Future.delayed(const Duration(seconds: 2));
+    throw Exception('Something terrible happened!');
+  }
+```
+
 Langkah 2: ElevatedButton
+
+```
+ returnError()
+                    .then((value) {
+                      setState(() {
+                        result = 'Success!';
+                      });
+                    })
+                    .catchError((onError) {
+                      setState(() {
+                        result = onError.toString();
+                      });
+                    }).whenComplete(() => print('Complete'));
+```
 
 Langkah 3: Run
 
 Soal 9: Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 9".
 
+<img src="https://github.com/user-attachments/assets/f241ba9a-39fc-45b8-91d8-586c3fbc9a7d" width="150">
+
 Langkah 4: Tambah method handleError()
 
+```
+Future handleError() async {
+    try {
+      await returnError();
+    } catch (error) {
+      setState(() {
+        result = error.toString();
+      });
+    } finally {
+      print('Complete');
+    }
+  }
+```
+
 Soal 10: Panggil method handleError() tersebut di ElevatedButton, lalu run. Apa hasilnya? Jelaskan perbedaan kode langkah 1 dan 4!
+
+```
+onPressed: () {
+                //soal 10 praktikum 5
+                handleError();
+```
+
+Hasilnya sama dan pada bagian debug console akan terlihat teks Complete
 
 **Praktikum 6**
 
 Langkah 1: install plugin geolocator
 
+<img width="352" height="30" alt="image" src="https://github.com/user-attachments/assets/e8a2aa32-2c90-435a-85f7-784c96f03141" />
+
 Langkah 2: Tambah permission GPS
 
+```
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+```
+
 Langkah 3: Buat file geolocation.dart
+
+<img width="110" height="24" alt="image" src="https://github.com/user-attachments/assets/0dcfb6ef-e7d5-4e93-90ef-7d39c6c1f88a" />
 
 Langkah 4: Buat StatefulWidget
 
 Langkah 5: Isi kode geolocation.dart
 
+```
+import 'package:flutter/material.dart';
+import 'package:geolocator/geolocator.dart';
+
+class LocationScreen extends StatefulWidget {
+  const LocationScreen({super.key});
+
+  @override
+  State<LocationScreen> createState() => _LocationScreenState();
+}
+
+class _LocationScreenState extends State<LocationScreen> {
+  String myPosition = '';
+
+  @override
+  void initState() {
+    super.initState();
+    getPosition().then((Position myPos) {
+      myPosition =
+          'Latitude: ${myPos.latitude}, Longitude: ${myPos.longitude.toString()}';
+      setState(() {
+        myPosition = myPosition;
+      });
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Current Location Annisa')),
+      body: Center(child: Text(myPosition)),
+    );
+  }
+
+  Future<Position> getPosition() async {
+    await Geolocator.requestPermission();
+    await Geolocator.isLocationServiceEnabled();
+    Position positon = await Geolocator.getCurrentPosition();
+    return positon;
+  }
+}
+```
+
 Soal 11: Tambahkan nama panggilan Anda pada tiap properti title sebagai identitas pekerjaan Anda.
 
+```
+appBar: AppBar(title: const Text('Current Location Annisa')),
+```
+
 Langkah 6: Edit main.dart
+
+```
+home: LocationScreen(),
+```
 
 Langkah 7: Run
 
