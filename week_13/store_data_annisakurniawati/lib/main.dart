@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -38,6 +39,10 @@ class _MyHomePageState extends State<MyHomePage> {
   String pizzaString = '';
   late File myFile;
   String fileText = '';
+  final pwdController = TextEditingController();
+  String myPass = '';
+  final stoorge = const FlutterSecureStorage();
+  final myKey = 'myPass';
   List<Pizza> myPizzas = [];
   String convertToJSON(List<Pizza> pizzas) {
     return jsonEncode(pizzas.map((pizza) => jsonEncode(pizza)).toList());
@@ -71,21 +76,28 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(title: const Text('JSON Annisa')),
       // body: Text(pizzaString),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text('Document Path: $documentPath'),
-            Text('Temporary Path: $tempPath'),
-            ElevatedButton(
-              onPressed: () {
-                readFile();
-              },
-              child: const Text('Read File'),
-            ),
-            Text('File Content: $fileText'),
-          ],
-        ),
+      body: Column(
+        // mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          TextField(controller: pwdController),
+          ElevatedButton(
+            child: const Text('Save Value'),
+            onPressed: () {
+              writeToSecureStorage();
+            },
+          ),
+          ElevatedButton(
+            child: const Text('Read Value'),
+            onPressed: () {
+              readFromSecureStorage().then((value) {
+                setState(() {
+                  myPass = value ?? '';
+                });
+              });
+            },
+          ),
+          Text('$myPass'),
+        ],
       ),
     );
   }
@@ -152,5 +164,14 @@ class _MyHomePageState extends State<MyHomePage> {
     } catch (e) {
       return false;
     }
+  }
+
+  Future writeToSecureStorage() async {
+    await stoorge.write(key: myKey, value: pwdController.text);
+  }
+
+  Future<String?> readFromSecureStorage() async {
+    String secret = await stoorge.read(key: myKey) ?? '';
+    return secret;
   }
 }
