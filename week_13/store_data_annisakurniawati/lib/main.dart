@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'model/pizza.dart';
@@ -30,6 +31,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  String documentPath = '';
+  String tempPath = '';
   int appCounter = 0;
   String pizzaString = '';
   List<Pizza> myPizzas = [];
@@ -47,12 +50,13 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     super.initState();
     readAndWritePreference();
-    readJsonFile().then((value) {
-      setState(() {
-        // myPizzas = value;
-        appCounter = appCounter;
-      });
-    });
+    getPaths();
+    // readJsonFile().then((value) {
+    //   setState(() {
+    //     // myPizzas = value;
+    //     appCounter = appCounter;
+    //   });
+    // });
   }
 
   @override
@@ -64,17 +68,8 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text('You have opened this app this many times:'),
-            Text(
-              '$appCounter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-            ElevatedButton(
-              onPressed: () {
-                deletePreference();
-              },
-              child: const Text('Reset Counter'),
-            ),
+            Text('Document Path: $documentPath'),
+            Text('Temporary Path: $tempPath'),
           ],
         ),
       ),
@@ -112,6 +107,15 @@ class _MyHomePageState extends State<MyHomePage> {
     await prefs.clear();
     setState(() {
       appCounter = 0;
+    });
+  }
+
+  Future getPaths() async {
+    final docDirectory = await getApplicationDocumentsDirectory();
+    final tempDirectory = await getTemporaryDirectory();
+    setState(() {
+      documentPath = docDirectory.path;
+      tempPath = tempDirectory.path;
     });
   }
 }
