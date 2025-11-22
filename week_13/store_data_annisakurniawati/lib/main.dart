@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'model/pizza.dart';
 
@@ -29,6 +30,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  int appCounter = 0;
   String pizzaString = '';
   List<Pizza> myPizzas = [];
   String convertToJSON(List<Pizza> pizzas) {
@@ -44,9 +46,11 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
+    readAndWritePreference();
     readJsonFile().then((value) {
       setState(() {
-        myPizzas = value;
+        // myPizzas = value;
+        appCounter = appCounter;
       });
     });
   }
@@ -56,14 +60,23 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(title: const Text('JSON Annisa')),
       // body: Text(pizzaString),
-      body: ListView.builder(
-        itemCount: myPizzas.length,
-        itemBuilder: (context, index) {
-          return ListTile(
-            title: Text(myPizzas[index].pizzaName),
-            subtitle: Text(myPizzas[index].description),
-          );
-        },
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text('You have opened this app this many times:'),
+            Text(
+              '$appCounter',
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
+            ElevatedButton(
+              onPressed: () {
+                deletePreference();
+              },
+              child: const Text('Reset Counter'),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -85,5 +98,20 @@ class _MyHomePageState extends State<MyHomePage> {
     String json = convertToJSON(myPizzas);
     print(json);
     return myPizzas;
+  }
+
+  Future readAndWritePreference() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    appCounter = prefs.getInt('appCounter') ?? 0;
+    appCounter++;
+    await prefs.setInt('appCounter', appCounter);
+  }
+
+  Future deletePreference() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.clear();
+    setState(() {
+      appCounter = 0;
+    });
   }
 }
