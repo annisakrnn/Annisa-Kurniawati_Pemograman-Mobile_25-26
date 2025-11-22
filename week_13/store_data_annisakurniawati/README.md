@@ -24,7 +24,6 @@ Soal 2: hasil run langkah 10
 
 <img width="374" height="503" alt="Screenshot 2025-11-21 195111" src="https://github.com/user-attachments/assets/5d5d0833-ea20-454e-904c-4e2630dbd7b3" />
 
-
 Soal 3: 
 
 - Masukkan hasil capture layar ke laporan praktikum Anda.
@@ -34,8 +33,6 @@ Soal 3:
 <img width="369" height="501" alt="Screenshot 2025-11-22 094716" src="https://github.com/user-attachments/assets/e072b8f9-14a6-4fdf-9198-567cec7c2520" />
 
 <img width="449" height="142" alt="Screenshot 2025-11-22 100329" src="https://github.com/user-attachments/assets/4896f2d1-ca09-4a8d-881d-aa1f563f0ca3" />
-
-
 
 Code Praktikum 1
 
@@ -307,7 +304,6 @@ Langkah 9: Run dan Perhatikan Output Null
 
 <img width="373" height="500" alt="image" src="https://github.com/user-attachments/assets/2d3b09ee-7e84-4e0e-be48-8979d07c48af" />
 
-
 Langkah 10: Tambahkan Operator Ternary untuk Output User-Friendly
 
 ```
@@ -490,7 +486,6 @@ Langkah 12: Run
 
 <img width="377" height="500" alt="image" src="https://github.com/user-attachments/assets/a0a93cf1-5e05-4675-8f6e-18b68de4037f" />
 
-
 Langkah 13: Buat Method deletePreference()
 
 ```
@@ -582,8 +577,7 @@ Langkah 7: Run
 
 Soal 7 : Capture hasil praktikum Anda dan lampirkan di README.
 
-![WhatsApp Image 2025-11-23 at 00 21 18_7de5525f](https://github.com/user-attachments/assets/e5847605-e6d4-44e4-ae94-156b49757c2b)
-
+<img src="/mnt/data/e5847605-e6d4-44e4-ae94-156b49757c2b.png" width="180">
 
 **Praktikum 6: Akses filesystem dengan direktori**
 
