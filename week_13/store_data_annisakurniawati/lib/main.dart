@@ -79,21 +79,46 @@ class _MyHomePageState extends State<MyHomePage> {
 
           return ListView.builder(
             itemCount: pizzas.length,
-            itemBuilder: (context, i) {
-              return ListTile(
-                title: Text(pizzas[i].pizzaName),
-                subtitle: Text(
-                  '${pizzas[i].description} - € ${pizzas[i].price}',
+            itemBuilder: (context, index) {
+              return Dismissible(
+                key: Key(pizzas[index].id.toString()),
+                direction: DismissDirection.endToStart,
+                background: Container(
+                  color: Colors.red,
+                  alignment: Alignment.centerRight,
+                  padding: const EdgeInsets.only(right: 20),
+                  child: const Icon(Icons.delete, color: Colors.white),
                 ),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) =>
-                          PizzaDetailScreen(pizza: pizzas[i], isNew: false),
-                    ),
-                  );
+
+                onDismissed: (direction) async {
+                  HttpHelper helper = HttpHelper();
+
+                  int deleteId = pizzas[index].id!;
+
+                  setState(() {
+                    pizzas.removeAt(index);
+                  });
+
+                  await helper.deletePizza(deleteId);
                 },
+
+                child: ListTile(
+                  title: Text(pizzas[index].pizzaName),
+                  subtitle: Text(
+                    '${pizzas[index].description} - € ${pizzas[index].price}',
+                  ),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => PizzaDetailScreen(
+                          pizza: pizzas[index],
+                          isNew: false,
+                        ),
+                      ),
+                    );
+                  },
+                ),
               );
             },
           );
