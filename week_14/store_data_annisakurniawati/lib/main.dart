@@ -8,6 +8,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:store_data_annisakurniawati/httphelper.dart';
 
 import 'model/pizza.dart';
+import 'pizza_detail.dart';
 
 void main() {
   runApp(const MyApp());

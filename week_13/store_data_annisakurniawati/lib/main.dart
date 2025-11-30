@@ -8,6 +8,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:store_data_annisakurniawati/httphelper.dart';
 
 import 'model/pizza.dart';
+import 'pizza_detail.dart';
 
 void main() {
   runApp(const MyApp());
@@ -45,31 +46,18 @@ class _MyHomePageState extends State<MyHomePage> {
   final stoorge = const FlutterSecureStorage();
   final myKey = 'myPass';
   List<Pizza> myPizzas = [];
+
   String convertToJSON(List<Pizza> pizzas) {
     return jsonEncode(pizzas.map((pizza) => jsonEncode(pizza)).toList());
   }
 
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   readJsonFile();
-  // }
-
   @override
   void initState() {
-    // readAndWritePreference();
     getPaths().then((_) {
       myFile = File('$documentPath/pizzas.txt');
       writeFile();
     });
     super.initState();
-
-    // readJsonFile().then((value) {
-    //   setState(() {
-    //     // myPizzas = value;
-    //     appCounter = appCounter;
-    //   });
-    // });
   }
 
   @override
@@ -97,30 +85,57 @@ class _MyHomePageState extends State<MyHomePage> {
                 subtitle: Text(
                   '${pizzas[i].description} - € ${pizzas[i].price}',
                 ),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                          PizzaDetailScreen(pizza: pizzas[i], isNew: false),
+                    ),
+                  );
+                },
               );
             },
+          );
+        },
+      ),
+
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.add),
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => PizzaDetailScreen(
+                pizza: Pizza(
+                  id: 0,
+                  pizzaName: "",
+                  description: "",
+                  price: 0.0,
+                  imageUrl: "",
+                ),
+                isNew: true,
+              ),
+            ),
           );
         },
       ),
     );
   }
 
-  // Future readJsonFile() async {
   Future<List<Pizza>> readJsonFile() async {
     String myString = await DefaultAssetBundle.of(
       context,
     ).loadString('assets/pizzalist.json');
-    // setState(() {
-    //   pizzaString = myString;
 
     List pizzaMapList = jsonDecode(myString);
     List<Pizza> myPizzas = [];
+
     for (var pizza in pizzaMapList) {
       Pizza myPizza = Pizza.fromJson(pizza);
       myPizzas.add(myPizza);
     }
-    String json = convertToJSON(myPizzas);
-    print(json);
+
     return myPizzas;
   }
 
@@ -180,7 +195,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Future<List<Pizza>> callPizzas() async {
     HttpHelper helper = HttpHelper();
-    List<Pizza> pizzas = await helper.getPizzaList();
     return await helper.getPizzaList();
   }
 }
